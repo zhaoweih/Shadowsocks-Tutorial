@@ -203,7 +203,9 @@ PAC模式就是访问国内网站会走国内IP，访问被封的网站走服务
 
 # 建议
 
-如果大家对这篇文章有任何疑问都可以提[issues]()，如果你有其他更简单或者其他方法翻墙也可以pull requests。
+如果大家对这篇文章有任何疑问都可以提[issues](https://github.com/zhaoweih/Shadowsocks-Tutorial/issues)，如果你有其他更简单或者其他方法翻墙也可以pull requests。
+
+**关于大学生领取Github包50美金DO优惠劵教程过阵子再更新。有感兴趣的同学可以自行搜索查看先。**
 
 # 关于
 
