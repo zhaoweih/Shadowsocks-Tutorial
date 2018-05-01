@@ -148,14 +148,17 @@ IOS:
 
 步骤：
 
--  1.获取一个国区以外的账号
+1.获取一个国区以外的账号
 
-注册国外appid教程：https://www.zhihu.com/question/26458172（相关注册外区账号教程很多，可以自行搜索）
+注册国外appid教程：https://www.zhihu.com/question/26458172
+
+（相关注册外区账号教程很多，可以自行搜索）
 
 **由于苹果的新政策，注册apple id在付款方式选择的时候非当地ip无法选择none选项，例如我注册英国区账号，需要ip为英国才可以。即在注册时要搭梯子，对应ip注册。**
 
-- 2.在APPStore中切换为国区以外账号
-- 3.在AppStore搜索**Potatso Lite**安装
+2.在APPStore中切换为国区以外账号
+
+3.在AppStore搜索**Potatso Lite**安装
 
 注：或者其他支持shadowsocks的APP也可以，这里比较推荐Potatso Lite
 
