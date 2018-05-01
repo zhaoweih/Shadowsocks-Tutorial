@@ -130,7 +130,7 @@ chmod +x shadowsocks-all.sh
 
 ## 下载客户端
 
-如果你跟着我到了这一步就代表安装好了服务器端，但是我们的电脑手机作为客户端也是需要安装客户端软件的。下面是各个终端的下载地址：
+如果你跟着我到了这一步就代表安装好了服务器端，但是我们的电脑手机作为客户端也是需要安装客户端软件的。下面是各个终端的下载地址（我用过Windows,MAC,Android,IOS操作起来都是差不多的。）：
 
 Windows：https://github.com/shadowsocks/shadowsocks-windows/releases
 
@@ -140,10 +140,29 @@ Android:https://github.com/shadowsocks/shadowsocks-android/releases
 
 Linux:https://github.com/shadowsocks/shadowsocks-qt5/wiki/Installation
 
-IOS:
+IOS: 
+
+由于国区APP下架VPN类APP，包括支持ss类的APP，所以需要切换账号
+
+建议注册一个国外账号，不要国内账号换区，这样既可以需要下载国内APP时切换国区账号，需要下载国外APP时切换外区账号。
+
+步骤：
+
+-  1.获取一个国区以外的账号
+
+注册国外appid教程：https://www.zhihu.com/question/26458172（相关注册外区账号教程很多，可以自行搜索）
+
+**由于苹果的新政策，注册apple id在付款方式选择的时候非当地ip无法选择none选项，例如我注册英国区账号，需要ip为英国才可以。即在注册时要搭梯子，对应ip注册。**
+
+- 2.在APPStore中切换为国区以外账号
+- 3.在AppStore搜索**Potatso Lite**安装
+
+注：或者其他支持shadowsocks的APP也可以，这里比较推荐Potatso Lite
 
 - [App Store](https://itunes.apple.com/us/app/wingy-http-s-socks5-proxy-utility/id1178584911)
 - [Big Boss](http://apt.thebigboss.org/onepackage.php?bundleid=com.linusyang.shadowsocks)
+
+
 
 下面以windows为例演示：
 
