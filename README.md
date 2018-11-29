@@ -161,8 +161,8 @@ IOS:
 3.在AppStore搜索**Potatso Lite**安装
 
 注：或者其他支持shadowsocks的APP也可以，这里比较推荐Potatso Lite
-
-- [App Store](https://itunes.apple.com/us/app/wingy-http-s-socks5-proxy-utility/id1178584911)
+- [Potatso Lite](https://itunes.apple.com/us/app/potatso-lite/id1239860606?mt=8)
+- [Wingy](https://itunes.apple.com/us/app/wingy-http-s-socks5-proxy-utility/id1178584911)
 - [Big Boss](http://apt.thebigboss.org/onepackage.php?bundleid=com.linusyang.shadowsocks)
 
 
@@ -206,8 +206,6 @@ PAC模式就是访问国内网站会走国内IP，访问被封的网站走服务
 # 最后
 
 最后，这里我们的任务完成了，但是如果你想优化一下服务器连接，可以安装BBR加速。具体可以看这篇文章尾部：[文章](https://github.com/Alvin9999/new-pac/wiki/%E8%87%AA%E5%BB%BAss%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%95%99%E7%A8%8B)
-
-
 
 > 连接服务器ip，登录成功后，在命令栏里粘贴以下代码：
 >
