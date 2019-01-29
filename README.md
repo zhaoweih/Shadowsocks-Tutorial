@@ -64,6 +64,8 @@ Vultr推荐链接：https://www.vultr.com/?ref=7370522
 
 ### 安装并运行xshell
 
+**提示：如果服务器可以ping通，但xshell无法连接说明服务器被封端口了（很多vultr日本服务器有这种状况），请更换其他地区服务器或者更换服务器商**
+
 windows下ssh连接需要下载Xshell，百度搜一搜就能下载了，当然你也可以用其他的，这里以Xshell为例，安装好Xshell后点击文件-新建
 
 ![](./images/w-1.png)
