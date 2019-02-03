@@ -207,23 +207,35 @@ PAC模式就是访问国内网站会走国内IP，访问被封的网站走服务
 
 # 最后
 
-最后，这里我们的任务完成了，但是如果你想优化一下服务器连接，可以安装BBR加速。具体可以看这篇文章尾部：[文章](https://github.com/Alvin9999/new-pac/wiki/%E8%87%AA%E5%BB%BAss%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%95%99%E7%A8%8B)
+最后，这里我们的任务完成了，但是如果你想优化一下服务器连接，可以安装BBR加速。具体可以看这篇文章：[文章](https://teddysun.com/489.html)
 
-> 连接服务器ip，登录成功后，在命令栏里粘贴以下代码：
+> 使用root用户登录，运行以下命令：
 >
-> 【谷歌BBR加速教程】
+> ```bsh
+> wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh && chmod +x bbr.sh && ./bbr.sh
+> ```
 >
-> yum -y install wget
->
-> wget --no-check-certificate <https://github.com/teddysun/across/raw/master/bbr.sh>
->
-> chmod +x bbr.sh
->
-> ./bbr.sh
->
-> 把上面整个代码复制后粘贴进去，不动的时候按回车，然后耐心等待，最后重启vps服务器即可。
+> 安装完成后，脚本会提示需要重启 VPS，输入 y 并回车后重启。
+
 
 # 更新
+## 190203更新
+如果想要测试服务器的下载速度和运行速度，可以查看这篇文章:[文章](https://teddysun.com/444.html)
+>仅需要一行命令
+>```bsh
+>wget -qO- bench.sh | bash
+>```
+
+我的一些服务器测试速度，希望对大家选择服务器时有用:
+- digitalocean新加坡 5美金一个月
+![](./images/do_singapore.png)
+- vpsserver日本东京 4.9美金一个月
+![](./images/vpsserver_jp.png)
+- hostus香港 2.95美金一个月
+![](./images/hostus_hk.png)
+- aws亚马逊韩国 免费一年EC2
+![](./images/aws_kr.png)
+
 ## 180624更新
 如果要PAC自定义规则，即譬如你要上的网站不在PAC目录里，可以自己添加
 譬如我要加github进入PAC自定义协议里
@@ -250,7 +262,7 @@ github.com/zhaoweih
 
 # 关于
 
-我是一名普通的大三学生，一个追求自由的少年，如果想要找我，可以给我发邮件📧
+我是一名普通的大学学生，一个追求自由的少年，如果想要找我，可以给我发邮件📧
 
 📮我的邮箱：zhaoweihao.dev@gmail.com
 
