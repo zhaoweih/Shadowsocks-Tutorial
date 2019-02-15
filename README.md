@@ -253,6 +253,23 @@ github.com/zhaoweih
 
 等等包含github.com的URL都会走服务器IP
 
+# Q&A
+汇总一些邮件反馈的问题
+
+**[已解决]1.问题：-bash: wget: command not found
+环境：服务器：linode，新加坡服务器，cent os7**
+
+可以参照这篇文章安装wget后尝试：https://www.wn789.com/5624.html
+
+**[已解决]2.问题:当访问Google学术时，会提示 :
+"We are sorry, but your computer or network may be sending automated queries. To protect our users, we can't process your request right now " **
+
+由于谷歌有自己的一套反代理爬虫的机制，所以很多 VPS 的 ip 会被谷歌检测到是代理，遇到这种情况可以用更换服务器即可，如果没有其他服务器可用，可以用[谷歌学术镜像](https://lai.yuweining.cn/archives/2112/)。
+
+# Discord
+**我创建了一个discord聊天室，遇到问题的小伙伴可以一起讨论**
+[![alt text](./images/discord.svg  "discordapp")](https://discord.gg/wHFxCVk)
+
 
 # 建议
 
