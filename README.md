@@ -56,9 +56,27 @@ Vultr推荐链接：https://www.vultr.com/?ref=7370522
 
 因为我是用mac的，考虑到大多数人还是使用windows为主，我就把我的旧电脑给翻出来开机继续做教程。基于windows 7。
 
-**如果你是用mac，那恭喜你，下面连接的步骤直接打开终端输入 **
+- **如果你是用mac，那恭喜你，下面连接的步骤直接打开终端输入**
 
-**`ssh root@你的服务器IP地址`**
+`ssh root@你的服务器IP地址`
+
+**连接就可以，然后可以跳过安装并运行xshell这个步骤**
+
+
+
+- **如果你是用windows10,可以打开系统自带的powershell工具:**
+
+
+
+
+
+![](./images/powershell_windows_menu.png)
+
+**输入**
+
+`ssh root@你的服务器IP地址`
+
+![](./images/powershell_run.png)
 
 **连接就可以，然后可以跳过安装并运行xshell这个步骤**
 
@@ -147,6 +165,8 @@ IOS:
 由于国区APP下架VPN类APP，包括支持ss类的APP，所以需要切换账号
 
 建议注册一个国外账号，不要国内账号换区，这样既可以需要下载国内APP时切换国区账号，需要下载国外APP时切换外区账号。
+
+**建议不想折腾的可以淘宝买一个国外App Store账号，便宜方便快捷**
 
 步骤：
 
