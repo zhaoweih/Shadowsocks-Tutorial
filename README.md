@@ -56,13 +56,33 @@ Vultr推荐链接：https://www.vultr.com/?ref=7370522
 
 因为我是用mac的，考虑到大多数人还是使用windows为主，我就把我的旧电脑给翻出来开机继续做教程。基于windows 7。
 
-**如果你是用mac，那恭喜你，下面连接的步骤直接打开终端输入 **
+- **如果你是用mac，那恭喜你，下面连接的步骤直接打开终端输入**
 
-**`ssh root@你的服务器IP地址`**
+`ssh root@你的服务器IP地址`
+
+**连接就可以，然后可以跳过安装并运行xshell这个步骤**
+
+
+
+- **如果你是用windows10,可以打开系统自带的powershell工具:**
+
+
+
+
+
+![](./images/powershell_windows_menu.png)
+
+**输入**
+
+`ssh root@你的服务器IP地址`
+
+![](./images/powershell_run.png)
 
 **连接就可以，然后可以跳过安装并运行xshell这个步骤**
 
 ### 安装并运行xshell
+
+**提示：如果服务器可以ping通，但xshell无法连接说明服务器被封端口了（很多vultr日本服务器有这种状况），请更换其他地区服务器或者更换服务器商**
 
 windows下ssh连接需要下载Xshell，百度搜一搜就能下载了，当然你也可以用其他的，这里以Xshell为例，安装好Xshell后点击文件-新建
 
@@ -146,6 +166,8 @@ IOS:
 
 建议注册一个国外账号，不要国内账号换区，这样既可以需要下载国内APP时切换国区账号，需要下载国外APP时切换外区账号。
 
+**建议不想折腾的可以淘宝买一个国外App Store账号，便宜方便快捷**
+
 步骤：
 
 1.获取一个国区以外的账号
@@ -205,23 +227,35 @@ PAC模式就是访问国内网站会走国内IP，访问被封的网站走服务
 
 # 最后
 
-最后，这里我们的任务完成了，但是如果你想优化一下服务器连接，可以安装BBR加速。具体可以看这篇文章尾部：[文章](https://github.com/Alvin9999/new-pac/wiki/%E8%87%AA%E5%BB%BAss%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%95%99%E7%A8%8B)
+最后，这里我们的任务完成了，但是如果你想优化一下服务器连接，可以安装BBR加速。具体可以看这篇文章：[文章](https://teddysun.com/489.html)
 
-> 连接服务器ip，登录成功后，在命令栏里粘贴以下代码：
+> 使用root用户登录，运行以下命令：
 >
-> 【谷歌BBR加速教程】
+> ```bsh
+> wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh && chmod +x bbr.sh && ./bbr.sh
+> ```
 >
-> yum -y install wget
->
-> wget --no-check-certificate <https://github.com/teddysun/across/raw/master/bbr.sh>
->
-> chmod +x bbr.sh
->
-> ./bbr.sh
->
-> 把上面整个代码复制后粘贴进去，不动的时候按回车，然后耐心等待，最后重启vps服务器即可。
+> 安装完成后，脚本会提示需要重启 VPS，输入 y 并回车后重启。
+
 
 # 更新
+## 190203更新
+如果想要测试服务器的下载速度和运行速度，可以查看这篇文章:[文章](https://teddysun.com/444.html)
+>仅需要一行命令
+>```bsh
+>wget -qO- bench.sh | bash
+>```
+
+我的一些服务器测试速度，希望对大家选择服务器时有用:
+- digitalocean新加坡 5美金一个月
+![](./images/do_singapore.png)
+- vpsserver日本东京 4.9美金一个月
+![](./images/vpsserver_jp.png)
+- hostus香港 2.95美金一个月
+![](./images/hostus_hk.png)
+- aws亚马逊韩国 免费一年EC2
+![](./images/aws_kr.png)
+
 ## 180624更新
 如果要PAC自定义规则，即譬如你要上的网站不在PAC目录里，可以自己添加
 譬如我要加github进入PAC自定义协议里
@@ -239,6 +273,38 @@ github.com/zhaoweih
 
 等等包含github.com的URL都会走服务器IP
 
+# Q&A
+汇总一些邮件反馈的问题
+
+**[已解决]1.问题：-bash: wget: command not found
+环境：服务器：linode，新加坡服务器，cent os7**
+
+可以参照这篇文章安装wget后尝试：https://www.wn789.com/5624.html
+
+
+
+**[已解决]2.问题:当访问Google学术时，会提示 :
+"We are sorry, but your computer or network may be sending automated queries. To protect our users, we can't process your request right now " **
+
+由于谷歌有自己的一套反代理爬虫的机制，所以很多 VPS 的 ip 会被谷歌检测到是代理，遇到这种情况可以用更换服务器即可，如果没有其他服务器可用，可以用[谷歌学术镜像](https://lai.yuweining.cn/archives/2112/)。
+
+# 讨论
+## Telegram
+**应小伙伴要求，添加telegram(点击下面链接加入channel)**
+
+https://t.me/joinchat/AAAAAExNMb2bCOpY276nMA
+
+## Discord
+**我创建了一个discord聊天室，遇到问题的小伙伴可以一起讨论**
+[![alt text](./images/discord.svg  "discordapp")](https://discord.gg/wHFxCVk)
+
+# 更多
+**如果想详细了解有关shadowsocks翻墙知识的小伙伴可以查看下面文章**
+- [浅谈vpn、vps、Proxy以及shadowsocks之间的联系和区别](https://medium.com/@thomas_summon/%E6%B5%85%E8%B0%88vpn-vps-proxy%E4%BB%A5%E5%8F%8Ashadowsocks%E4%B9%8B%E9%97%B4%E7%9A%84%E8%81%94%E7%B3%BB%E5%92%8C%E5%8C%BA%E5%88%AB-b0198f92db1b)
+
+**由于现在很多大牌服务器IP被墙，建议不喜欢折腾的小伙伴可以尝试找别人一起合租VPS（btw：合租需要自己去掂量对方真实性，这里只是推荐一些VPS合租网站，对真实性无法保证)**
+
+- [VPS合租网](https://www.vpshz.com/)
 
 # 建议
 
@@ -248,7 +314,7 @@ github.com/zhaoweih
 
 # 关于
 
-我是一名普通的大三学生，一个追求自由的少年，如果想要找我，可以给我发邮件📧
+我是一名普通的大学学生，一个追求自由的少年，如果想要找我，可以给我发邮件📧
 
 📮我的邮箱：zhaoweihao.dev@gmail.com
 
