@@ -1,3 +1,9 @@
+# 建议
+
+![](./images/goodbye.png)
+
+  **由于秋水逸冰大佬的退出，所以这篇旧教程使用的一键安装shadowsocks脚本可能在未来的某一天也不管用了。出于这个原因，我又写了一篇新教程用来给大家作为备用教程，建议移步到新教程[给小白的超简单shadowsocks翻墙教程](./super_easy_shadowsocks_tutorial.md)。**
+
 # 前言
 
 为什么要做这个库？因为有句话说“不会翻墙的程序员不是好程序员”，但是某些原因，翻墙可是越来越难了，我之前是用某灯，但是自从上个月开始某灯也不稳定了；我还以为可以和某灯相宿相飞一段时间的，后来就投靠了Shadowsocks了，为什么会选择Shadowsocks呢，因为可以自己搭建服务器，不再受牵制，而且由于是个人服务器被封IP的几率也不会很大；当然你也可以和自己信任的人共享使用，但是Shadowsocks的教程网络上真是参次不齐，很容易误导那些只想翻墙而不是要了解它原理的人，所以我就蹦出个想法：做个几乎是一键式的傻瓜Shadowsocks（以下简称ss）搭建教程给小白们，让大家都能共享自由的互联网。
@@ -238,6 +244,10 @@ PAC模式就是访问国内网站会走国内IP，访问被封的网站走服务
 > 安装完成后，脚本会提示需要重启 VPS，输入 y 并回车后重启。
 
 # 更新
+
+## 190518更新  
+[增加AWS安装EPEL的说明 #8](https://github.com/zhaoweih/Shadowsocks-Tutorial/issues/8)
+
 ## 190507更新  
 如果需要设置多端口，可以参考以下文章  
 [如何启用 Shadowsocks 的多端口](https://teddysun.com/532.html)
@@ -284,16 +294,20 @@ github.com/zhaoweih
 汇总一些邮件反馈的问题
 
 **[已解决]1.问题：-bash: wget: command not found
-环境：服务器：linode，新加坡服务器，cent os7**
+环境：服务器：linode，新加坡服务器，cent os7**  
 
 可以参照这篇文章安装wget后尝试：https://www.wn789.com/5624.html
 
 
 
-**[已解决]2.问题:当访问Google学术时，会提示 :
-"We are sorry, but your computer or network may be sending automated queries. To protect our users, we can't process your request right now " **
+**[已解决]2.问题:当访问Google学术时，会提示 : 
+"We are sorry, but your computer or network may be sending automated queries. To protect our users, we can't process your request right now " **  
 
 由于谷歌有自己的一套反代理爬虫的机制，所以很多 VPS 的 ip 会被谷歌检测到是代理，遇到这种情况可以用更换服务器即可，如果没有其他服务器可用，可以用[谷歌学术镜像](https://lai.yuweining.cn/archives/2112/)。
+
+**[已解决]3.aws ec2报错Install EPEL repository failed的解决办法 **  
+
+参考文章：http://blog.openpilot.cc/archives/aws-ec2%E6%8A%A5%E9%94%99install-epel-repository-failed%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/
 
 # 讨论
 ## Telegram
