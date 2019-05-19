@@ -1,8 +1,3 @@
-# 建议
-
-![](./images/goodbye.png)
-
-  **由于秋水逸冰大佬的退出，所以这篇旧教程使用的一键安装shadowsocks脚本可能在未来的某一天也不管用了。出于这个原因，我又写了一篇新教程用来给大家作为备用教程，建议移步到新教程[给小白的超简单shadowsocks翻墙教程](./super_easy_shadowsocks_tutorial.md)。**
 
 # 前言
 
@@ -244,6 +239,9 @@ PAC模式就是访问国内网站会走国内IP，访问被封的网站走服务
 > 安装完成后，脚本会提示需要重启 VPS，输入 y 并回车后重启。
 
 # 更新
+## 190519更新  
+添加备用教程  
+[给小白的超简单shadowsocks翻墙教程](./super_easy_shadowsocks_tutorial.md)
 
 ## 190518更新  
 [增加AWS安装EPEL的说明 #8](https://github.com/zhaoweih/Shadowsocks-Tutorial/issues/8)
