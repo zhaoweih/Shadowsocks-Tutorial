@@ -226,6 +226,49 @@ PAC模式就是访问国内网站会走国内IP，访问被封的网站走服务
 
 ![](./images/w-16.png)
 
+# 补充
+## 常用命令
+start 启动
+stop 停止
+restart 重启
+status 状态
+### Shadowsocks-libev 版：
+``` bash
+/etc/init.d/shadowsocks-libev start
+/etc/init.d/shadowsocks-libev stop
+/etc/init.d/shadowsocks-libev restart
+/etc/init.d/shadowsocks-libev status
+```
+
+### Shadowsocks-Python 版：
+``` bash
+/etc/init.d/shadowsocks-python start
+/etc/init.d/shadowsocks-python stop
+/etc/init.d/shadowsocks-python restart
+/etc/init.d/shadowsocks-python status
+```
+
+### ShadowsocksR 版：
+``` bash
+/etc/init.d/shadowsocks-r start
+/etc/init.d/shadowsocks-r stop
+/etc/init.d/shadowsocks-r restart
+/etc/init.d/shadowsocks-r status
+```
+
+### Shadowsocks-Go 版：
+``` bash
+/etc/init.d/shadowsocks-go start
+/etc/init.d/shadowsocks-go stop
+/etc/init.d/shadowsocks-go restart
+/etc/init.d/shadowsocks-go status
+```
+
+## 如何卸载
+运行如下命令，根据提示，选择对应版本卸载
+``` bash
+./shadowsocks-all.sh uninstall
+```
 # 最后
 
 最后，这里我们的任务完成了，但是如果你想优化一下服务器连接，可以安装BBR加速。具体可以看这篇文章：[文章](https://teddysun.com/489.html)
