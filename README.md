@@ -227,6 +227,10 @@ PAC模式就是访问国内网站会走国内IP，访问被封的网站走服务
 ![](./images/w-16.png)
 
 # 补充
+## 设置多端口
+
+[如何启用 Shadowsocks 的多端口](https://zhaoweihao.com/2019/06/01/%E5%A6%82%E4%BD%95%E5%90%AF%E7%94%A8Shadowsocks%E7%9A%84%E5%A4%9A%E7%AB%AF%E5%8F%A3/)
+
 ## 常用命令
 start 启动
 stop 停止
@@ -282,16 +286,16 @@ status 状态
 > 安装完成后，脚本会提示需要重启 VPS，输入 y 并回车后重启。
 
 # 更新
+## 190507更新  
+如果需要设置多端口，可以参考以下文章  
+[如何启用 Shadowsocks 的多端口](https://zhaoweihao.com/2019/06/01/%E5%A6%82%E4%BD%95%E5%90%AF%E7%94%A8Shadowsocks%E7%9A%84%E5%A4%9A%E7%AB%AF%E5%8F%A3/)
+
 ## 190519更新  
 添加备用教程  
 [给小白的超简单shadowsocks翻墙教程](./super_easy_shadowsocks_tutorial.md)
 
 ## 190518更新  
 [增加AWS安装EPEL的说明 #8](https://github.com/zhaoweih/Shadowsocks-Tutorial/issues/8)
-
-## 190507更新  
-如果需要设置多端口，可以参考以下文章  
-[如何启用 Shadowsocks 的多端口](https://teddysun.com/532.html)
 
 ## 190505更新
 如果只是需要临时使用，可以尝试免费的节点  
