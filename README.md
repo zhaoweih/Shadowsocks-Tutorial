@@ -286,7 +286,7 @@ status 状态
 > 安装完成后，脚本会提示需要重启 VPS，输入 y 并回车后重启。
 
 # 更新
-## 190507更新  
+## 190601更新  
 如果需要设置多端口，可以参考以下文章  
 [如何启用 Shadowsocks 的多端口](https://zhaoweihao.com/2019/06/01/%E5%A6%82%E4%BD%95%E5%90%AF%E7%94%A8Shadowsocks%E7%9A%84%E5%A4%9A%E7%AB%AF%E5%8F%A3/)
 
