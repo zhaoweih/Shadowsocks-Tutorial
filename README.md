@@ -286,6 +286,16 @@ status 状态
 > 安装完成后，脚本会提示需要重启 VPS，输入 y 并回车后重启。
 
 # 更新
+## 190615更新  
+[#13](https://github.com/zhaoweih/Shadowsocks-Tutorial/issues/13)  
+
+> 其他需要paypal的服务商，例如[digitalocean](https://m.do.co/c/6a45e437ae9f)、[hostus](https://hostus.us/)、[vpsserver](https://www.vpsserver.com/)。后面两的成功率很高，基本我开没有被封的，但是后面两不能随便销毁主机换ip的，且用珍惜吧。
+>
+> 或者试一下便宜的机场服务（如果不需要很稳定的话，机场服务线路多，而且快）：https://ssmgr.gyteng.com/user/index
+>
+> 😀
+>
+
 ## 190601更新  
 如果需要设置多端口，可以参考以下文章  
 [如何启用 Shadowsocks 的多端口](https://zhaoweihao.com/2019/06/01/%E5%A6%82%E4%BD%95%E5%90%AF%E7%94%A8Shadowsocks%E7%9A%84%E5%A4%9A%E7%AB%AF%E5%8F%A3/)
