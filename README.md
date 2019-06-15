@@ -204,9 +204,9 @@ IOS:
 
 
 
-接着启用系统代理：
+最后确保打开了PAC模式：
 
-![](./images/w-15.png)
+![](./images/super_easy_shadowsocks_tutorial/21.png)
 
 
 
