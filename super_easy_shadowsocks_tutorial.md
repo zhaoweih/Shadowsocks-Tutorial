@@ -24,9 +24,9 @@ Vultr推荐链接：https://www.vultr.com/?ref=7370522
 
 ![](./images/2.png)
 
-第二步：在打开的页面选择洛杉矶Los Angeles服务器（由于日本服务器滥用导致很多IP被封了，建议电信用户可以选择洛杉矶或者伦敦），如果喜欢其他服务器也可以选择，后续操作是一样一样的
+第二步：在打开的页面选择德国Frankfurt服务器（由于日本服务器滥用导致很多IP被封了，可以选择欧洲服务器，例如法国、德国等），如果喜欢其他服务器也可以选择，后续操作是一样一样的
 
-![](./images/super_easy_shadowsocks_tutorial/1.png)
+![](./images/super_easy_shadowsocks_tutorial/de.png)
 
 第三步：接下来要注意了，系统最好选择Ubuntu，点击Ubuntu可以下拉选择18.04 x64（建议和我选择一样，避免问题出现）
 
