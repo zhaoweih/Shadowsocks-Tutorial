@@ -1,3 +1,4 @@
+> 如果过程中出现问题无法解决可以尝试[备用教程](https://github.com/zhaoweih/Shadowsocks-Tutorial/blob/master/super_easy_shadowsocks_tutorial.md)，或者发送邮件到我邮箱zhaoweihao.dev@gmail.com  
 
 # 前言
 
