@@ -1,4 +1,4 @@
-# 给小白的超简单shadowsocks翻墙教程
+# 给小白的超简单shadowsocks翻墙教程(备用教程)
 
 # 前言
 
