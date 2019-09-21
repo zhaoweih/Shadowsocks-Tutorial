@@ -174,7 +174,7 @@ Windows端:https://github.com/2dust/v2rayN/releases/latest
 
 Android端:https://github.com/2dust/v2rayNG/releases/latest
 
-WIndows端教程：[V2RayN使用教程]([https://github.com/233boy/v2ray/wiki/V2RayN%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B](https://github.com/233boy/v2ray/wiki/V2RayN使用教程))
+WIndows端教程：[V2RayN使用教程](https://github.com/233boy/v2ray/wiki/V2RayN%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B)
 
 
 
