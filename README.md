@@ -371,9 +371,9 @@ github.com/zhaoweih
 
 # 讨论
 ## Telegram
-**应小伙伴要求，添加telegram(点击下面链接加入channel)**
+**应小伙伴要求，添加telegram(点击下面链接加入讨论组)**
 
-https://t.me/joinchat/AAAAAExNMb2bCOpY276nMA
+https://t.me/joinchat/LKj8bxbNbvfadsFyqMZMmA
 
 ## Discord
 **我创建了一个discord聊天室，遇到问题的小伙伴可以一起讨论**
