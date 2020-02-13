@@ -34,7 +34,7 @@
 
 ## 2、 在国内服务器配置好iptables
 
-用ssh连接上国内服务器，复制粘贴下面的代码到服务器，回车运行（感谢逗比制作的一键脚本:https://doubibackup.com/mbofzp9h-2.html）
+用ssh连接上国内服务器，复制粘贴下面的代码到服务器，回车运行（  感谢逗比制作的一键脚本:https://doubibackup.com/mbofzp9h-2.html  )
 
 ```bash
 wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubiBackup/doubi/master/iptables-pf.sh && chmod +x iptables-pf.sh && bash iptables-pf.sh
