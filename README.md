@@ -160,11 +160,13 @@ chmod +x shadowsocks-all.sh
 
 Windows：https://github.com/shadowsocks/shadowsocks-windows/releases
 
-MAC:https://github.com/shadowsocks/ShadowsocksX-NG/releases
-
 Android:https://github.com/shadowsocks/shadowsocks-android/releases
 
+MAC:https://github.com/shadowsocks/ShadowsocksX-NG/releases
+
 Linux:https://github.com/shadowsocks/shadowsocks-qt5/wiki/Installation
+
+**提醒：由于Github的在国外原因，如果下载特别慢的同学可以到我的[服务器](https://resource.zhaoweihao.dev/socks/menu.html)下载，更新周期大概两周一次**
 
 IOS: 
 
