@@ -68,7 +68,9 @@ chmod +x ./kcptun.sh
 
 如果上面的步骤你都正确配置了，就代表你的kcptun就配置好了，接下来是配置客户端软件
 
-首先到这里https://github.com/shadowsocks/kcptun/releases你的客户端软件，例如我是windows 64位的，我需要下载kcptun-windows-amd64-20170718.tar.gz这个文件
+首先到这里https://github.com/shadowsocks/kcptun/releases
+
+下载你的客户端软件，例如我是windows 64位的，我需要下载kcptun-windows-amd64-20170718.tar.gz这个文件
 
 ![](./images/kcptun/13.png)
 
