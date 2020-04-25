@@ -240,7 +240,7 @@ PAC模式就是访问国内网站会走国内IP，访问被封的网站走服务
 # 补充
 ## 设置多端口
 
-[如何启用 Shadowsocks 的多端口](https://zhaoweihao.com/2019/06/01/%E5%A6%82%E4%BD%95%E5%90%AF%E7%94%A8Shadowsocks%E7%9A%84%E5%A4%9A%E7%AB%AF%E5%8F%A3/)
+[如何启用 Shadowsocks 的多端口](https://zhaoweihao.dev/2019/06/01/%E5%A6%82%E4%BD%95%E5%90%AF%E7%94%A8Shadowsocks%E7%9A%84%E5%A4%9A%E7%AB%AF%E5%8F%A3/)
 
 ## 常用命令
 start 启动
@@ -309,7 +309,7 @@ status 状态
 
 ## 190601更新  
 如果需要设置多端口，可以参考以下文章  
-[如何启用 Shadowsocks 的多端口](https://zhaoweihao.com/2019/06/01/%E5%A6%82%E4%BD%95%E5%90%AF%E7%94%A8Shadowsocks%E7%9A%84%E5%A4%9A%E7%AB%AF%E5%8F%A3/)
+[如何启用 Shadowsocks 的多端口](https://zhaoweihao.dev/2019/06/01/%E5%A6%82%E4%BD%95%E5%90%AF%E7%94%A8Shadowsocks%E7%9A%84%E5%A4%9A%E7%AB%AF%E5%8F%A3/)
 
 ## 190519更新  
 添加备用教程  
