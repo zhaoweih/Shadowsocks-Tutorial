@@ -367,20 +367,15 @@ github.com/zhaoweih
 
 
 **[已解决]2.问题:当访问Google学术时，会提示 : 
-"We are sorry, but your computer or network may be sending automated queries. To protect our users, we can't process your request right now " **  
+"We are sorry, but your computer or network may be sending automated queries. To protect our users, we can't process your request right now "**  
 
 由于谷歌有自己的一套反代理爬虫的机制，所以很多 VPS 的 ip 会被谷歌检测到是代理，遇到这种情况可以用更换服务器即可，如果没有其他服务器可用，可以用[谷歌学术镜像](https://lai.yuweining.cn/archives/2112/)。
 
-**[已解决]3.aws ec2报错Install EPEL repository failed的解决办法 **  
+**[已解决]3.aws ec2报错Install EPEL repository failed的解决办法**  
 
 参考文章：http://blog.openpilot.cc/archives/aws-ec2%E6%8A%A5%E9%94%99install-epel-repository-failed%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/
 
 # 讨论
-## Telegram
-**应小伙伴要求，添加telegram(点击下面链接加入讨论组)**
-
-https://t.me/joinchat/LKj8bxbNbvfadsFyqMZMmA
-
 ## Discord
 **我创建了一个discord聊天室，遇到问题的小伙伴可以一起讨论**
 [![alt text](./images/discord.svg  "discordapp")](https://discord.gg/wHFxCVk)
@@ -388,10 +383,6 @@ https://t.me/joinchat/LKj8bxbNbvfadsFyqMZMmA
 # 更多
 **如果想详细了解有关shadowsocks翻墙知识的小伙伴可以查看下面文章**
 - [浅谈vpn、vps、Proxy以及shadowsocks之间的联系和区别](https://medium.com/@thomas_summon/%E6%B5%85%E8%B0%88vpn-vps-proxy%E4%BB%A5%E5%8F%8Ashadowsocks%E4%B9%8B%E9%97%B4%E7%9A%84%E8%81%94%E7%B3%BB%E5%92%8C%E5%8C%BA%E5%88%AB-b0198f92db1b)
-
-**由于现在很多大牌服务器IP被墙，建议不喜欢折腾的小伙伴可以尝试找别人一起合租VPS（btw：合租需要自己去掂量对方真实性，这里只是推荐一些VPS合租网站，对真实性无法保证)**
-
-- [VPS合租网](https://www.vpshz.com/)
 
 # 建议
 
