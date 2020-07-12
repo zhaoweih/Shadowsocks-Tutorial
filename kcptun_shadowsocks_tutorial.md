@@ -1,5 +1,9 @@
 # 给小白的kcptun加速shadowsocks教程
 
+# 问题
+
+❓如果对文章有任何疑问可以提到:https://github.com/zhaoweih/Shadowsocks-Tutorial/issues
+
 # 前言
 
   我之前发过一个利用国内VPS做中转加速的文章，虽然加速明显，但是需要买多个服务器花多一分钱，对于荷包不太友好。这一次的教程是在原有的shadowsocks(以下简称ss)服务器上做加速，省下买多一个服务器的钱，而且加速效果也非常好，我一个在vultr的服务器原本在晚上是youtube打开都成问题的，只是能连接上，但是慢成狗，用这个方法加速后晚上也可以打开youtube看个1080p没问题了，好了，废话少说直接上教程。

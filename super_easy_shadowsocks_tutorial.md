@@ -1,5 +1,9 @@
 # 给小白的超简单shadowsocks翻墙教程(备用教程)
 
+# 问题
+
+❓如果对文章有任何疑问可以提到:https://github.com/zhaoweih/Shadowsocks-Tutorial/issues
+
 # 前言
 
   由于秋水逸冰大佬的退出，所以旧教程使用的一键安装shadowsocks脚本可能在未来的某一天也不管用了。出于这个原因，我又写了一篇文章用来给大家作为备用教程，这篇文章使用的是[Google Jigsaw](https://jigsaw.google.com/)团队制作的同样也是shadowsocks的一键脚本，由于是Google制作，所以迫于某些压力退出的可能性不大，个人认为可以作为长期的备用教程。
@@ -156,11 +160,11 @@ Linux版：https://raw.githubusercontent.com/Jigsaw-Code/outline-releases/master
 
 下面是各个终端的下载地址（我用过Windows,MAC,Android,IOS操作起来都是差不多的。）：
 
-Windows：https://github.com/shadowsocks/shadowsocks-windows/releases/download/4.1.6/Shadowsocks-4.1.6.zip
+Windows：https://github.com/shadowsocks/shadowsocks-windows/releases
 
-MAC:https://github.com/shadowsocks/ShadowsocksX-NG/releases/download/v1.8.2/ShadowsocksX-NG.app.1.8.2.zip
+Android:https://github.com/shadowsocks/shadowsocks-android/releases
 
-Android:https://github.com/shadowsocks/shadowsocks-android/releases/download/v4.7.4/shadowsocks--universal-4.7.4.apk
+MAC:https://github.com/shadowsocks/ShadowsocksX-NG/releases
 
 Linux:https://github.com/shadowsocks/shadowsocks-qt5/wiki/Installation
 
@@ -232,12 +236,10 @@ PAC模式就是访问国内网站会走国内IP，访问被封的网站走服务
 
 # 关于
 
-我是一名普通的大学学生，一个追求自由的少年，如果想要找我，可以给我发邮件📧
+我是一名初入社会的社畜，一个追求自由的少年，如果想要找我，可以给我发邮件📧
 
 📮我的邮箱：zhaoweihao.dev@gmail.com
 
-
-
 # 赞赏
 
-作为学生我目前生活还是蛮自如的，有吃的有喝的，就不用赞赏了。喜欢就给我个star或者fork一下吧❤️，谢谢！
+我目前生活还是蛮自如的，有吃的有喝的，就不用赞赏了。喜欢就给我个star或者fork一下吧❤️，谢谢！

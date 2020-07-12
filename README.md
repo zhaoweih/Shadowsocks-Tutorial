@@ -1,10 +1,10 @@
+**[全部文章目录](https://github.com/zhaoweih/Shadowsocks-Tutorial/wiki)**
+
 > 如果Shadowsocks被封的小伙伴可以尝试一下[V2ray教程](./super_easy_v2ray_tutorial.md)
 >
 > 🚀如果想加速Shadowsocks的小伙伴可以看看我这篇文章[给小白的kcptun加速shadowsocks教程](./kcptun_shadowsocks_tutorial.md)(效果很明显)
 >
 > 如果过程中出现问题无法解决可以尝试[备用教程](https://github.com/zhaoweih/Shadowsocks-Tutorial/blob/master/super_easy_shadowsocks_tutorial.md)，或者发送邮件到我邮箱zhaoweihao.dev@gmail.com  或者提issues:https://github.com/zhaoweih/Shadowsocks-Tutorial/issues
-
-**[全部文章目录](https://github.com/zhaoweih/Shadowsocks-Tutorial/wiki)**
 
 # 前言
 
@@ -167,8 +167,6 @@ Android:https://github.com/shadowsocks/shadowsocks-android/releases
 MAC:https://github.com/shadowsocks/ShadowsocksX-NG/releases
 
 Linux:https://github.com/shadowsocks/shadowsocks-qt5/wiki/Installation
-
-**提醒：由于Github的在国外原因，如果下载特别慢的同学可以到我的[服务器](https://resource.zhaoweihao.dev/socks/menu.html)下载，更新周期大概两周一次**
 
 IOS: 
 
@@ -382,6 +380,7 @@ github.com/zhaoweih
 
 # 更多
 **如果想详细了解有关shadowsocks翻墙知识的小伙伴可以查看下面文章**
+
 - [浅谈vpn、vps、Proxy以及shadowsocks之间的联系和区别](https://medium.com/@thomas_summon/%E6%B5%85%E8%B0%88vpn-vps-proxy%E4%BB%A5%E5%8F%8Ashadowsocks%E4%B9%8B%E9%97%B4%E7%9A%84%E8%81%94%E7%B3%BB%E5%92%8C%E5%8C%BA%E5%88%AB-b0198f92db1b)
 
 # 建议
@@ -392,12 +391,10 @@ github.com/zhaoweih
 
 # 关于
 
-我是一名普通的大学学生，一个追求自由的少年，如果想要找我，可以给我发邮件📧
+我是一名初入社会的社畜，一个追求自由的少年，如果想要找我，可以给我发邮件📧
 
 📮我的邮箱：zhaoweihao.dev@gmail.com
 
-
-
 # 赞赏
 
-作为学生我目前生活还是蛮自如的，有吃的有喝的，就不用赞赏了。喜欢就给我个star或者fork一下吧❤️，谢谢！
+我目前生活还是蛮自如的，有吃的有喝的，就不用赞赏了。喜欢就给我个star或者fork一下吧❤️，谢谢！
