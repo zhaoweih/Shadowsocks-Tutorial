@@ -398,3 +398,5 @@ github.com/zhaoweih
 # 赞赏
 
 我目前生活还是蛮自如的，有吃的有喝的，就不用赞赏了。喜欢就给我个star或者fork一下吧❤️，谢谢！
+
+也可以请我喝杯咖啡☕:https://zhaoweihao.dev/pay
