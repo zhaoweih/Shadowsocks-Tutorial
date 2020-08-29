@@ -86,6 +86,14 @@ Vultr推荐链接：https://www.vultr.com/?ref=7370522
 
 ![](./images/powershell_run.png)
 
+接着输入`yes`
+
+![](./images/powershell-yes.png)
+
+然后输入密码 (提示：粘贴是鼠标右键)
+
+![](./images/powershell-password.png)
+
 **连接就可以，然后可以跳过安装并运行xshell这个步骤**
 
 ### 安装并运行xshell
