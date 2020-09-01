@@ -20,7 +20,7 @@
 
 Vultr推荐链接：https://www.vultr.com/?ref=7370522
 
-这里我比较推荐Vultr，为什么呢？因为他有日本服务器，延迟低，掉包也低； **但是后面我会推荐大学生使用DigitalOcean（以下简称DO），因为Github学生包有DO优惠劵，但是只限于大学生领取，如果是学生可以关注后面。** 注册登录后先充值5美金，用paypal绑定国内银行卡可以最低充值5美金，当然也有支付宝，支付宝要最低10美金。
+这里我比较推荐Vultr，为什么呢？因为他有日本服务器，延迟低，掉包也低； 注册登录后先充值5美金，用paypal绑定国内银行卡可以最低充值5美金，当然也有支付宝，支付宝要最低10美金。
 
 ![](./images/1.png)
 
@@ -85,14 +85,6 @@ Vultr推荐链接：https://www.vultr.com/?ref=7370522
 `ssh root@你的服务器IP地址`
 
 ![](./images/powershell_run.png)
-
-接着输入`yes`
-
-![](./images/powershell-yes.png)
-
-然后输入密码 (提示：粘贴是鼠标右键)
-
-![](./images/powershell-password.png)
 
 **连接就可以，然后可以跳过安装并运行xshell这个步骤**
 
@@ -200,12 +192,10 @@ IOS:
 
 注：或者其他支持shadowsocks的APP也可以，这里比较推荐Potatso Lite
 - [Potatso Lite](https://itunes.apple.com/us/app/potatso-lite/id1239860606?mt=8)
-- [Wingy](https://itunes.apple.com/us/app/wingy-http-s-socks5-proxy-utility/id1178584911)
-- [Big Boss](http://apt.thebigboss.org/onepackage.php?bundleid=com.linusyang.shadowsocks)
 
+  
 
-
-下面以windows为例演示：
+**下面以windows为例演示：**
 
 打开上方网址下载客户端：
 
@@ -394,8 +384,6 @@ github.com/zhaoweih
 # 建议
 
 如果大家对这篇文章有任何疑问都可以提[issues](https://github.com/zhaoweih/Shadowsocks-Tutorial/issues)，如果你有其他更简单或者其他方法翻墙也可以pull requests。
-
-**关于大学生领取Github包50美金DO优惠劵教程过阵子再更新。有感兴趣的同学可以自行搜索查看先。**
 
 # 关于
 
