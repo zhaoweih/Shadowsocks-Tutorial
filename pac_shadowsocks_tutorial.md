@@ -2,7 +2,8 @@
 
 # 问题
 
-❓如果对文章有任何疑问可以提到:https://github.com/zhaoweih/Shadowsocks-Tutorial/issues或者发送邮件给我:zhaoweihao.dev@gmail.com
+❓如果对文章有任何疑问可以提到:https://github.com/zhaoweih/Shadowsocks-Tutorial/issues
+或者发送邮件给我:zhaoweihao.dev@gmail.com
 
 # 前言
 
