@@ -12,7 +12,7 @@
 
   ## Windows
 
-1)首先下载[PAC文件](./pac/pac.txt)
+1)首先下载[PAC文件](https://raw.githubusercontent.com/zhaoweih/Shadowsocks-Tutorial/master/pac/pac.txt)
 
 2)如果你的windows客户端端口没有改过，用的默认的1080端口那就不用改，如果是改了其他端口需要打开下载的pac.txt文件，修改第一行1080端口为你自己设置的端口，例如我的是1086端口，我就要修改成`var wall_proxy = "SOCKS5 127.0.0.1:1086";`然后保存修改
 
@@ -20,7 +20,7 @@
 
 ## Mac
 
-1)首先下载[PAC文件](./pac/gfwlist.js)
+1)首先下载[PAC文件](https://raw.githubusercontent.com/zhaoweih/Shadowsocks-Tutorial/master/pac/gfwlist.js)
 
 2)如果你的Mac客户端端口没有改过，用的默认的1086端口那就不用改，如果是改了其他端口需要打开下载的gfwlist.js文件，修改第一行1086端口为你自己设置的端口，例如我的是1086端口，我就要修改成`var wall_proxy = "SOCKS5 127.0.0.1:1086";`然后保存修改
 
