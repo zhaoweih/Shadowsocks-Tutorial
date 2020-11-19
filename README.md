@@ -396,8 +396,9 @@ github.com/zhaoweih
 
 📮我的邮箱：zhaoweihao.dev@gmail.com
 
+# Ads
+提供Vultr独享半价服务器，例如80美金的Vultr服务器在我这里40美金代开，付款后我代开服务器提供root账号密码到你邮箱，开了之后我不会去登录的保证安全，欢迎个人或者机场主联系我📮:zhaoweihao.dev@gmail.com
+
 # 赞赏
 
 我目前生活还是蛮自如的，有吃的有喝的，就不用赞赏了。喜欢就给我个star或者fork一下吧❤️，谢谢！
-
-也可以请我喝杯咖啡☕:https://zhaoweihao.dev/pay
