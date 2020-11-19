@@ -168,6 +168,11 @@ MAC:https://github.com/shadowsocks/ShadowsocksX-NG/releases
 
 Linux:https://github.com/shadowsocks/shadowsocks-qt5/wiki/Installation
 
+> **提示:**
+>
+> 如果github下载慢，可以试一下到我的网盘下载(部署在Vultr日本):
+> https://download.chiuwaiho.tech/s/GJRmzjWDaPoj96Q
+
 IOS: 
 
 由于国区APP下架VPN类APP，包括支持ss类的APP，所以需要切换账号
