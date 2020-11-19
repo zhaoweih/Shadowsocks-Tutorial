@@ -1,4 +1,4 @@
-**[全部文章目录](https://github.com/zhaoweih/Shadowsocks-Tutorial/wiki)**
+**[全部文章目录](https://github.com/zhaoweih/Shadowsocks-Tutorial/wiki/%E7%9B%AE%E5%BD%95)**
 
 > 如果Shadowsocks被封的小伙伴可以尝试一下[V2ray教程](./super_easy_v2ray_tutorial.md)
 >
