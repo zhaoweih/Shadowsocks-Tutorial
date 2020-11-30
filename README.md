@@ -5,6 +5,8 @@
 > 🚀如果想加速Shadowsocks的小伙伴可以看看我这篇文章[给小白的kcptun加速shadowsocks教程](./kcptun_shadowsocks_tutorial.md)(效果很明显)
 >
 > 如果过程中出现问题无法解决可以尝试[备用教程](https://github.com/zhaoweih/Shadowsocks-Tutorial/blob/master/super_easy_shadowsocks_tutorial.md)，或者发送邮件到我邮箱zhaoweihao.dev@gmail.com  或者提issues:https://github.com/zhaoweih/Shadowsocks-Tutorial/issues
+>
+> 提示：如果要使用国内的服务器(例如阿里云、腾讯云之类的)最好先[一键DD系统](https://ssr.tools/693)重装成纯净版系统再搭建Shadowsocks服务，否则可能会收到警告邮件
 
 # 前言
 
