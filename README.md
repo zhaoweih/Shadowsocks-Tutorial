@@ -6,7 +6,6 @@
 >
 > 如果过程中出现问题无法解决可以尝试[备用教程](https://github.com/zhaoweih/Shadowsocks-Tutorial/blob/master/super_easy_shadowsocks_tutorial.md)，或者发送邮件到我邮箱zhaoweihao.dev@gmail.com  或者提[issues](https://github.com/zhaoweih/Shadowsocks-Tutorial/issues)
 >
-> 提示：如果要使用国内的服务器(例如阿里云、腾讯云之类的)最好先[一键DD系统](https://ssr.tools/693)重装成纯净版系统再搭建Shadowsocks服务，否则可能会收到警告邮件
 
 # 前言
 
@@ -300,6 +299,9 @@ status 状态
 > 安装完成后，脚本会提示需要重启 VPS，输入 y 并回车后重启。
 
 # 更新
+## 201210更新
+Tips：如果要使用国内的服务器(例如阿里云、腾讯云之类的)最好先[一键DD系统](https://ssr.tools/693)重装成纯净版系统再搭建Shadowsocks服务，否则可能会收到警告邮件
+
 ## 190615更新  
 [#13](https://github.com/zhaoweih/Shadowsocks-Tutorial/issues/13)  
 
