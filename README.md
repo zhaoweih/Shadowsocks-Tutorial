@@ -1,8 +1,6 @@
 **[全部文章目录](https://github.com/zhaoweih/Shadowsocks-Tutorial/wiki/%E7%9B%AE%E5%BD%95)**
 
-> 如果Shadowsocks被封的小伙伴可以尝试一下[V2ray教程](./super_easy_v2ray_tutorial.md)
->
-> 🚀如果想加速Shadowsocks的小伙伴可以看看我这篇文章[给小白的kcptun加速shadowsocks教程](./kcptun_shadowsocks_tutorial.md)(效果很明显)
+> 🚀安装成功后如果想加速Shadowsocks的小伙伴可以看看我这篇文章[给小白的kcptun加速shadowsocks教程](./kcptun_shadowsocks_tutorial.md)(效果很明显)
 >
 > 如果过程中出现问题无法解决可以尝试[备用教程](https://github.com/zhaoweih/Shadowsocks-Tutorial/blob/master/super_easy_shadowsocks_tutorial.md)，或者发送邮件到我邮箱zhaoweihao.dev@gmail.com  或者提[issues](https://github.com/zhaoweih/Shadowsocks-Tutorial/issues)
 >
@@ -35,9 +33,9 @@ Vultr推荐链接：https://www.vultr.com/?ref=7370522
 
 ![](./images/super_easy_shadowsocks_tutorial/de.png)
 
-第三步：接下来要注意了，系统最好选择CentOS 6，点击CentOS可以下拉选择6
+第三步：接下来要注意了，系统最好选择Debian 10 x64，点击Debian可以下拉选择10 x64
 
-![](./images/4.png)
+![](./images/system_select_debian.png)
 
 第四步：选择套餐，当然ss不需要配置太高的服务器，最低配置5美金一个月的就可以了，反正我每次看2.5美金都是卖光的，如果你能看到那赶紧选啊，千年一遇。
 
