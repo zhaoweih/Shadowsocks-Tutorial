@@ -160,7 +160,9 @@ chmod +x shadowsocks-all.sh
 
 如果你跟着我到了这一步就代表安装好了服务器端，但是我们的电脑手机作为客户端也是需要安装客户端软件的。下面是各个终端的下载地址（我用过Windows,MAC,Android,IOS操作起来都是差不多的。）：
 
-Windows：https://github.com/shadowsocks/shadowsocks-windows/releases
+**注意：由于windows客户端最新版4.4.0.0取消了旧版加密方式支持，所以暂时需要先选择4.3.3.0版本的客户端**
+
+Windows：https://github.com/shadowsocks/shadowsocks-windows/releases/tag/4.3.3.0
 
 Android:https://github.com/shadowsocks/shadowsocks-android/releases
 
