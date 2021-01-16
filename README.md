@@ -126,27 +126,31 @@ chmod +x shadowsocks-all.sh
 
 ![](./images/w-6.png)
 
-这时候按一下Enter回车键它又可以继续了～
+这时候按一下**Enter回车键**它又可以继续了～
 
-接着又蹦出些东西，是让我们选择ss的服务器端，这里我选择go版本的，输入3按回车
+接着又蹦出些东西，是让我们选择ss的服务器端，这里我选择libev版本的，输入**4**按回车
 
-![](./images/w-7.png)
+![](./images/libev/1.png)
 
-如同往常，接下来是要填入ss客户端登录的密码，这里我随意填：abc123456
+如同往常，接下来是要填入ss客户端登录的密码，这里我随意填：**abc123456**
 
-![](./images/w-8.png)
+![](./images/libev/2.png)
 
-接下来是输入端口号（1-65535任意数字），这里我填默认的
+接下来是输入端口号（1-65535任意数字），这里我随便填个**12853**的
 
-![](./images/w-9.png)
+![](./images/libev/3.png)
 
-接下来是选择加密方式，默认就好，按回车
+接下来是选择加密方式，最好选择xchacha20-ietf-poly1305，输入**13**
 
-![](./images/w-10.png)
+![](./images/libev/4.png)
 
-接着又是反手一个回车就好
+接着是否需要开启simply-obfs插件，默认就行，**回车**
 
-![](./images/w-11.png)
+![](./images/libev/5.png)
+
+接着又是反手一个**回车**就好
+
+![](./images/libev/6.png)
 
 这里可能需要等待一会，看到下图就是大功告成了。干杯🍻！
 
@@ -154,15 +158,13 @@ chmod +x shadowsocks-all.sh
 
 我就当大家英文水平还好吧，下面说的就是你的服务器IP，服务器端端口，密码，加密方式。
 
-![](./images/w-12.png)
+![](./images/libev/7.png)
 
 ## 下载客户端
 
 如果你跟着我到了这一步就代表安装好了服务器端，但是我们的电脑手机作为客户端也是需要安装客户端软件的。下面是各个终端的下载地址（我用过Windows,MAC,Android,IOS操作起来都是差不多的。）：
 
-**注意：由于windows客户端最新版4.4.0.0取消了旧版加密方式支持，所以暂时需要先选择4.3.3.0版本的客户端**
-
-Windows：https://github.com/shadowsocks/shadowsocks-windows/releases/tag/4.3.3.0
+Windows：https://github.com/shadowsocks/shadowsocks-windows/releases
 
 Android:https://github.com/shadowsocks/shadowsocks-android/releases
 
@@ -206,7 +208,7 @@ IOS:
 
 打开上方网址下载客户端：
 
-![](./images/w-13.png)
+![](./images/libev/9.png)
 
 接着解压后打开Shadowsocks.exe，右击右下角小飞机，点击服务器-编辑服务器：
 
@@ -214,7 +216,7 @@ IOS:
 
 还记得上面建议保存的图片吗？这里就用到了，服务器IP，端口，密码，加密方式，然后点击确定
 
-![](./images/w-14.png)
+![](./images/libev/8.png)
 
 
 
