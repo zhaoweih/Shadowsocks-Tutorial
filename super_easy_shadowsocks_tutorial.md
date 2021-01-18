@@ -32,9 +32,9 @@ Vultr推荐链接：https://www.vultr.com/?ref=7370522
 
 ![](./images/super_easy_shadowsocks_tutorial/de.png)
 
-第三步：接下来要注意了，系统最好选择Ubuntu，点击Ubuntu可以下拉选择18.04 x64（建议和我选择一样，避免问题出现）
+第三步：接下来要注意了，系统最好选择Debian，点击**Debian**可以下拉选择**10 x64**（建议和我选择一样，避免问题出现）
 
-![](./images/super_easy_shadowsocks_tutorial/2.png)
+![](./images/system_select_debian.png)
 
 第四步：选择套餐，当然ss不需要配置太高的服务器，最低配置5美金一个月的就可以了，反正我每次看2.5美金都是卖光的，如果你能看到那赶紧选啊，千年一遇。
 
