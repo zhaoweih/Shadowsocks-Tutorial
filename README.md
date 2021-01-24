@@ -252,6 +252,7 @@ start 启动
 stop 停止
 restart 重启
 status 状态
+
 ### Shadowsocks-libev 版：
 ``` bash
 /etc/init.d/shadowsocks-libev start
@@ -305,30 +306,12 @@ status 状态
 ## 201210更新
 Tips：如果要使用国内的服务器(例如阿里云、腾讯云之类的)最好先[一键DD系统](https://ssr.tools/693)重装成纯净版系统再搭建Shadowsocks服务，否则可能会收到警告邮件
 
-## 190615更新  
-[#13](https://github.com/zhaoweih/Shadowsocks-Tutorial/issues/13)  
-
-> 其他需要paypal的服务商，例如[digitalocean](https://m.do.co/c/6a45e437ae9f)、[hostus](https://hostus.us/)、[vpsserver](https://www.vpsserver.com/)。后面两的成功率很高，基本我开没有被封的，但是后面两不能随便销毁主机换ip的，且用珍惜吧。
->
-> 或者试一下便宜的机场服务（如果不需要很稳定的话，机场服务线路多，而且快）：https://ssmgr.gyteng.com/home/ref/9354903935
->
-> 😀
->
-
 ## 190601更新  
 如果需要设置多端口，可以参考以下文章  
 [如何启用 Shadowsocks 的多端口](https://zhaoweihao.dev/2019/06/01/%E5%A6%82%E4%BD%95%E5%90%AF%E7%94%A8Shadowsocks%E7%9A%84%E5%A4%9A%E7%AB%AF%E5%8F%A3/)
 
-## 190519更新  
-添加备用教程  
-[给小白的超简单shadowsocks翻墙教程](./super_easy_shadowsocks_tutorial.md)
-
 ## 190518更新  
 [增加AWS安装EPEL的说明 #8](https://github.com/zhaoweih/Shadowsocks-Tutorial/issues/8)
-
-## 190505更新
-如果只是需要临时使用，可以尝试免费的节点  
-https://free1.gyteng.com/
 
 ## 190203更新
 如果想要测试服务器的下载速度和运行速度，可以查看这篇文章:[文章](https://teddysun.com/444.html)
@@ -386,10 +369,6 @@ github.com/zhaoweih
 由于以前文章的centos7不可选导致选择centos8导致的无法安装问题可以尝试使用**Debian10x64**系统安装[#27](https://github.com/zhaoweih/Shadowsocks-Tutorial/issues/27)
 
 # 讨论
-## Discussions
-**创建了Github讨论区，欢迎小伙伴一起来讨论**
-[Github Discussions](https://github.com/zhaoweih/Shadowsocks-Tutorial/discussions)
-
 ## Discord
 **我创建了一个discord聊天室，遇到问题的小伙伴可以一起讨论**
 [![alt text](./images/discord.svg  "discordapp")](https://discord.gg/wHFxCVk)
