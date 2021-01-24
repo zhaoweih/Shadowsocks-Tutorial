@@ -372,8 +372,6 @@ github.com/zhaoweih
 
 可以参照这篇文章安装wget后尝试：https://www.wn789.com/5624.html
 
-
-
 **[已解决]2.问题:当访问Google学术时，会提示 : 
 "We are sorry, but your computer or network may be sending automated queries. To protect our users, we can't process your request right now "**  
 
@@ -382,6 +380,10 @@ github.com/zhaoweih
 **[已解决]3.aws ec2报错Install EPEL repository failed的解决办法**  
 
 参考文章：http://blog.openpilot.cc/archives/aws-ec2%E6%8A%A5%E9%94%99install-epel-repository-failed%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/
+
+**[已解决]4.[Error] Failed to install python**  
+
+由于以前文章的centos7不可选导致选择centos8导致的无法安装问题可以尝试使用**Debian10x64**系统安装[#27](https://github.com/zhaoweih/Shadowsocks-Tutorial/issues/27)
 
 # 讨论
 ## Discussions
