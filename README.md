@@ -384,3 +384,8 @@ github.com/zhaoweih
 # 赞赏
 
 我目前生活还是蛮自如的，有吃的有喝的，就不用赞赏了。喜欢就给我个star或者fork一下吧❤️，谢谢！
+
+# 内推
+目前公司技术团队(base深圳)在招iOS前端工程师、go后端开发工程师、Unity 3D游戏工程师等等，有兴趣的老哥可以发简历给我📫:zhaoweihao.dev@gmail.com
+
+-  [内推职位](https://blog.chiuwaiho.tech/pointone.tech/recommand_email.html)
