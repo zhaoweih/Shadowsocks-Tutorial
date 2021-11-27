@@ -2,7 +2,7 @@
 
 > 🚀安装成功后如果想加速Shadowsocks的小伙伴可以看看我这篇文章[给小白的kcptun加速shadowsocks教程](./kcptun_shadowsocks_tutorial.md)(效果很明显)
 >
-> 如果过程中出现问题无法解决可以尝试[备用教程](https://github.com/zhaoweih/Shadowsocks-Tutorial/blob/master/super_easy_shadowsocks_tutorial.md)，或者发送邮件到我邮箱zhaoweihao.dev@gmail.com  或者提[issues](https://github.com/zhaoweih/Shadowsocks-Tutorial/issues)
+> 如果过程中出现问题无法解决可以发送邮件到我邮箱zhaoweihao.dev@gmail.com  或者提[issues](https://github.com/zhaoweih/Shadowsocks-Tutorial/issues)
 >
 > 如果工程师朋友们需要加速git克隆速度可以查看这篇文章[给小白的git配置shadowsocks代理加速教程](./git/git_shadowsocks_readme.md)
 
