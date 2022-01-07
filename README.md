@@ -387,4 +387,4 @@ github.com/zhaoweih
 
 # 赞赏
 
-❤Support me **(BSC USDT)** :0x758e1df86d8d41b28fc801719dbc521f53400d52
+我目前生活还是蛮自如的，有吃的有喝的，就不用赞赏了。喜欢就给我个star或者fork一下吧❤️，谢谢！
