@@ -30,13 +30,17 @@ Vultr推荐链接：https://www.vultr.com/?ref=7370522
 
 ![](./images/2.png)
 
-选择Cloud Compute
+选择**Cloud Compute**
 
-![](./images/price_type.png)
+![](./images/server_type_select.png)
+
+选择**Regular Performance**
+
+![](./images/cpu_type_select.png)
 
 第二步：在打开的页面选择德国Frankfurt服务器 (由于日本服务器滥用导致很多IP被封了，可以选择欧洲服务器，例如法国、德国等) ，如果喜欢其他服务器也可以选择，后续操作是一样一样的
 
-![](./images/super_easy_shadowsocks_tutorial/de.png)
+![](./images/location_select.png)
 
 第三步：接下来要注意了，系统最好选择**CentOS 7 x64**，点击CentOS可以下拉选择7 x64
 
@@ -45,6 +49,10 @@ Vultr推荐链接：https://www.vultr.com/?ref=7370522
 第四步：选择套餐，当然ss不需要配置太高的服务器，最低配置5美金一个月的就可以了，反正我每次看2.5美金都是卖光的，如果你能看到那赶紧选啊，千年一遇。
 
 ![](./images/5.png)
+
+记得**取消选中自动备份**(会收1美金/月)
+
+![](./images/disable_backup.png)
 
 第五步：接着就是部署起来了，当然你也可以给服务器起个名字再部署
 
