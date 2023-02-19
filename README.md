@@ -5,6 +5,10 @@
 > 如果过程中出现问题无法解决可以发送邮件到我邮箱zhaoweihao.dev@gmail.com  或者提[issues](https://github.com/zhaoweih/Shadowsocks-Tutorial/issues)
 >
 > 如果工程师朋友们需要加速git克隆速度可以查看这篇文章[给小白的git配置shadowsocks代理加速教程](./git/git_shadowsocks_readme.md)
+>
+> 
+
+Tips:下面教程可能会涉及到一些简单命令行，如果不想折腾的小伙伴可以建议购买机场服务翻墙:[🚀给小白的超简单Shadowsocks机场翻墙教程](https://github.com/zhaoweih/Super-Easy-Shadowsocks-Tutorial)
 
 # 前言
 
