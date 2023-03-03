@@ -1,6 +1,8 @@
 [中文版本](./README.md)
 
 > Note: This article was translated by ChatGPT and reviewed by myself. We apologize for any semantic inaccuracies.
+>
+> This article is optimized and adjusted for the Chinese network. Some parts of the content may not be relevant for readers outside of China.
 
 **[Table of Contents](https://github.com/zhaoweih/Shadowsocks-Tutorial/wiki/目录)**
 
