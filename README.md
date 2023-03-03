@@ -1,3 +1,5 @@
+[🌏English Version](./README_en.md)
+
 **[全部文章目录](https://github.com/zhaoweih/Shadowsocks-Tutorial/wiki/%E7%9B%AE%E5%BD%95)**
 
 > 🚀安装成功后如果想加速Shadowsocks的小伙伴可以看看我这篇文章[给小白的kcptun加速shadowsocks教程](./kcptun_shadowsocks_tutorial.md)(效果很明显)
@@ -128,7 +130,7 @@ windows下ssh连接需要下载Xshell，百度搜一搜就能下载了，当然�
 
 下面就是精髓的部分了，感谢[@teddysun](https://github.com/teddysun)大佬制作的一键安装脚本，具体更多细节可查看博客：https://teddysun.com/486.html  (由于大佬的[退出](https://teddysun.com/548.html),所以下面的命令目前还可以使用，但是版本已经不再更新)
 
-```
+```bash
 wget --no-check-certificate -O shadowsocks-all.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh
 chmod +x shadowsocks-all.sh
 ./shadowsocks-all.sh 2>&1 | tee shadowsocks-all.log
@@ -254,7 +256,7 @@ PAC模式就是访问国内网站会走国内IP，访问被封的网站走服务
 # 补充
 ## 设置多端口
 
-[如何启用 Shadowsocks 的多端口](https://blog.chiuwaiho.tech/2019/06/01/%E5%A6%82%E4%BD%95%E5%90%AF%E7%94%A8Shadowsocks%E7%9A%84%E5%A4%9A%E7%AB%AF%E5%8F%A3/)
+[如何启用 Shadowsocks 的多端口](https://stanleyzhao.xyz/2019/06/01/%E5%A6%82%E4%BD%95%E5%90%AF%E7%94%A8Shadowsocks%E7%9A%84%E5%A4%9A%E7%AB%AF%E5%8F%A3/)
 
 ## 常用命令
 start 启动
@@ -305,7 +307,7 @@ status 状态
 
 > 使用root用户登录，运行以下命令：
 >
-> ```bsh
+> ```bash
 > wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh && chmod +x bbr.sh && ./bbr.sh
 > ```
 >
@@ -321,7 +323,7 @@ Tips：如果要使用国内的服务器(例如阿里云、腾讯云之类的)�
 ## 190203更新
 如果想要测试服务器的下载速度和运行速度，可以查看这篇文章:[文章](https://teddysun.com/444.html)
 >仅需要一行命令
->```bsh
+>```bash
 >wget -qO- bench.sh | bash
 >```
 
@@ -340,7 +342,7 @@ Tips：如果要使用国内的服务器(例如阿里云、腾讯云之类的)�
 譬如我要加github进入PAC自定义协议里
 格式如下：
 
-```
+```javascript
 ||github.com
 ```
 
