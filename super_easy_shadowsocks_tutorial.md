@@ -28,13 +28,21 @@ Vultr推荐链接：https://www.vultr.com/?ref=7370522
 
 ![](./images/2.png)
 
-第二步：在打开的页面选择德国Frankfurt服务器（由于日本服务器滥用导致很多IP被封了，可以选择欧洲服务器，例如法国、德国等），如果喜欢其他服务器也可以选择，后续操作是一样一样的
+选择**Cloud Compute**
 
-![](./images/super_easy_shadowsocks_tutorial/de.png)
+![](./images/server_type_select.png)
 
-第三步：接下来要注意了，系统最好选择Debian，点击**Debian**可以下拉选择**10 x64**（建议和我选择一样，避免问题出现）
+选择**Regular Performance**
 
-![](./images/system_select_debian.png)
+![](./images/cpu_type_select.png)
+
+第二步：在打开的页面选择德国Frankfurt服务器 (由于日本服务器滥用导致很多IP被封了，可以选择欧洲服务器，例如法国、德国等) ，如果喜欢其他服务器也可以选择，后续操作是一样一样的
+
+![](./images/location_select.png)
+
+第三步：接下来要注意了，系统最好选择**CentOS 7 x64**，点击CentOS可以下拉选择7 x64
+
+![](./images/select_centos7.png)
 
 第四步：选择套餐，当然ss不需要配置太高的服务器，最低配置5美金一个月的就可以了，反正我每次看2.5美金都是卖光的，如果你能看到那赶紧选啊，千年一遇。
 

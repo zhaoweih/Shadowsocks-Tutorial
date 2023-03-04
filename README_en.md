@@ -50,7 +50,7 @@ Step 2: On the page that opens, select the Frankfurt server in Germany. (Due to 
 
 Step 3: Next, pay attention to the system selection. It's recommended to choose **CentOS 7 x64**. Click on CentOS and select 7 x64 from the drop-down menu.
 
-![](./images/server_type.png)
+![](./images/select_centos7.png)
 
 Step 4: Choose the package. Of course, you don't need a server with high configuration for SS. The lowest package that costs $5 per month is sufficient. Every time I check, the package that costs $2.5 is always sold out. If you can see it, be sure to choose it quickly. It's a rare opportunity.
 

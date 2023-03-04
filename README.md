@@ -48,7 +48,7 @@ Vultr推荐链接：https://www.vultr.com/?ref=9091308-8H
 
 第三步：接下来要注意了，系统最好选择**CentOS 7 x64**，点击CentOS可以下拉选择7 x64
 
-![](./images/server_type.png)
+![](./images/select_centos7.png)
 
 第四步：选择套餐，当然ss不需要配置太高的服务器，最低配置5美金一个月的就可以了，反正我每次看2.5美金都是卖光的，如果你能看到那赶紧选啊，千年一遇。
 
