@@ -134,6 +134,16 @@ sudo bash -c "$(wget -qO- https://raw.githubusercontent.com/Jigsaw-Code/outline-
 
 ![](./images/super_easy_shadowsocks_tutorial/14.png)
 
+接下来还需要执行下面两条命令关闭CentOS 7自带的防火墙
+
+```bash
+systemctl stop firewalld
+
+systemctl disable firewalld
+```
+
+
+
 ## 下载服务端管理器
 
 windows版：https://raw.githubusercontent.com/Jigsaw-Code/outline-releases/master/manager/stable/Outline-Manager.exe
@@ -232,6 +242,53 @@ PAC模式就是访问国内网站会走国内IP，访问被封的网站走服务
 接着最神圣的时刻来了，在浏览器输入google.com，回车，蹦，谷歌回来了
 
 ![](./images/super_easy_shadowsocks_tutorial/22.png)
+
+
+
+### 补充：
+
+关于CentOS关闭防火墙操作详细介绍可以查看下面ChatGPT的答复:
+
+在CentOS中关闭防火墙可以按照以下步骤进行操作：
+
+1. 使用root用户登录到CentOS系统。
+2. 检查防火墙状态。在命令行界面输入以下命令：
+
+```bash
+systemctl status firewalld
+```
+
+如果防火墙已经启动，命令行会显示防火墙的状态为“active”。
+
+1. 关闭防火墙。在命令行界面输入以下命令：
+
+```bash
+systemctl stop firewalld
+```
+
+该命令将停止防火墙服务。
+
+1. 禁止防火墙在开机时自动启动。在命令行界面输入以下命令：
+
+```bash
+systemctl disable firewalld
+```
+
+该命令将禁止防火墙在开机时自动启动。
+
+1. 检查防火墙状态。在命令行界面输入以下命令：
+
+```bash
+systemctl status firewalld
+```
+
+如果防火墙已经关闭，命令行会显示防火墙的状态为“inactive”。
+
+需要注意的是，关闭防火墙会增加系统的风险，可能会导致系统受到攻击或入侵。因此，在关闭防火墙之前，请确保已经采取其他安全措施，例如使用其他防火墙或限制网络访问等。
+
+
+
+感谢ChatGPT的解答！
 
 # 讨论
 ## Discord
