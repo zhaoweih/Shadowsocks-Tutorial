@@ -315,6 +315,28 @@ status 状态
 >
 > 安装完成后，脚本会提示需要重启 VPS，输入 y 并回车后重启。
 
+# Q&A
+
+汇总一些邮件反馈的问题
+
+**[已解决]1.问题：-bash: wget: command not found
+环境：服务器：linode，新加坡服务器，cent os7**  
+
+可以参照这篇文章安装wget后尝试：https://www.wn789.com/5624.html
+
+**[已解决]2.问题:当访问Google学术时，会提示 : 
+"We are sorry, but your computer or network may be sending automated queries. To protect our users, we can't process your request right now "**  
+
+由于谷歌有自己的一套反代理爬虫的机制，所以很多 VPS 的 ip 会被谷歌检测到是代理，遇到这种情况可以用更换服务器即可，如果没有其他服务器可用，可以用[谷歌学术镜像](https://lai.yuweining.cn/archives/2112/)。
+
+**[已解决]3.aws ec2报错Install EPEL repository failed的解决办法**  
+
+参考文章：http://blog.openpilot.cc/archives/aws-ec2%E6%8A%A5%E9%94%99install-epel-repository-failed%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/
+
+**[已解决]4.[Error] Failed to install python**  
+
+由于以前文章的centos7不可选导致选择centos8导致的无法安装问题可以尝试使用**Debian10x64或者CentOS7**系统安装[#27](https://github.com/zhaoweih/Shadowsocks-Tutorial/issues/27)
+
 # 更新
 ## 201210更新
 Tips：如果要使用国内的服务器(例如阿里云、腾讯云之类的)最好先[一键DD系统](https://ssr.tools/693)重装成纯净版系统再搭建Shadowsocks服务，否则可能会收到警告邮件
@@ -355,27 +377,6 @@ api.github.com
 github.com/zhaoweih
 
 等等包含github.com的URL都会走服务器IP
-
-# Q&A
-汇总一些邮件反馈的问题
-
-**[已解决]1.问题：-bash: wget: command not found
-环境：服务器：linode，新加坡服务器，cent os7**  
-
-可以参照这篇文章安装wget后尝试：https://www.wn789.com/5624.html
-
-**[已解决]2.问题:当访问Google学术时，会提示 : 
-"We are sorry, but your computer or network may be sending automated queries. To protect our users, we can't process your request right now "**  
-
-由于谷歌有自己的一套反代理爬虫的机制，所以很多 VPS 的 ip 会被谷歌检测到是代理，遇到这种情况可以用更换服务器即可，如果没有其他服务器可用，可以用[谷歌学术镜像](https://lai.yuweining.cn/archives/2112/)。
-
-**[已解决]3.aws ec2报错Install EPEL repository failed的解决办法**  
-
-参考文章：http://blog.openpilot.cc/archives/aws-ec2%E6%8A%A5%E9%94%99install-epel-repository-failed%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/
-
-**[已解决]4.[Error] Failed to install python**  
-
-由于以前文章的centos7不可选导致选择centos8导致的无法安装问题可以尝试使用**Debian10x64**系统安装[#27](https://github.com/zhaoweih/Shadowsocks-Tutorial/issues/27)
 
 # 讨论
 ## Discord
