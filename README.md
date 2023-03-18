@@ -344,6 +344,19 @@ status 状态
 
 由于以前文章的centos7不可选导致选择centos8导致的无法安装问题可以尝试使用**Debian10x64或者CentOS7**系统安装[#27](https://github.com/zhaoweih/Shadowsocks-Tutorial/issues/27)
 
+**[已解决]5.可以ping通但是连不上**
+
+这个情况有可能是防火墙没关闭，因为现在vultr默认会打开防火墙，所以需要关闭防火墙端口才能通
+
+```bash
+systemctl stop firewalld
+systemctl disable firewalld
+```
+
+执行后可以用`systemctl status firewalld`查看是否已经关闭，显示inactive就是关闭了防火墙
+
+![](./images/firewall_inactive.png)
+
 # 更新
 
 ## 20230318更新
