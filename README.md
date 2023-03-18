@@ -176,6 +176,13 @@ chmod +x shadowsocks-all.sh
 
 ![](./images/libev/7.png)
 
+最后需要关闭下系统的防火墙，粘贴下面的命令然后回车就行
+
+```bash
+systemctl stop firewalld
+systemctl disable firewalld
+```
+
 ## 下载客户端
 
 如果你跟着我到了这一步就代表安装好了服务器端，但是我们的电脑手机作为客户端也是需要安装客户端软件的。下面是各个终端的下载地址（我用过Windows,MAC,Android,IOS操作起来都是差不多的。）：
@@ -338,6 +345,10 @@ status 状态
 由于以前文章的centos7不可选导致选择centos8导致的无法安装问题可以尝试使用**Debian10x64或者CentOS7**系统安装[#27](https://github.com/zhaoweih/Shadowsocks-Tutorial/issues/27)
 
 # 更新
+
+## 20230318更新
+[CentOS 7+查看防火墙状态开启或关闭防火墙命令](https://cloud.tencent.com/developer/article/1869020)
+
 ## 201210更新
 Tips：如果要使用国内的服务器(例如阿里云、腾讯云之类的)最好先[一键DD系统](https://ssr.tools/693)重装成纯净版系统再搭建Shadowsocks服务，否则可能会收到警告邮件
 
