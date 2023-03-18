@@ -357,6 +357,8 @@ systemctl disable firewalld
 
 ![](./images/firewall_inactive.png)
 
+[在线检查端口是否开放](https://tool.chinaz.com/port)
+
 # 更新
 
 ## 20230318更新
