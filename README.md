@@ -408,7 +408,7 @@ github.com/zhaoweih
 ## Telegram群
 **我创建了一个Telegram群，遇到问题的小伙伴可以一起讨论**
 
-[<img src="./images/Logo.svg" alt="alt text" title="Telegram" style="zoom: 33%;" />](https://t.me/+1aZY6DOOsUIxNDJl)
+[<img src="./images/Logo.png" alt="alt text" title="Telegram" />](https://t.me/+1aZY6DOOsUIxNDJl)
 
 # 更多
 **如果想详细了解有关shadowsocks翻墙知识的小伙伴可以查看下面文章**
