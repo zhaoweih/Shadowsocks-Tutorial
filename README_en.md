@@ -24,7 +24,7 @@ As the saying goes, "the beginning is always the hardest." It's true that buying
 
 ### 1. Register and Log In
 [<img src="./images/logo_onwhite.svg" alt="alt text" title="vultr" style="zoom: 50%;" />](https://www.vultr.com/?ref=9091308-8H)
-I recommend using Vultr for this tutorial. You can sign up using this referral link: https://www.vultr.com/?ref=9091308-8H
+I recommend using Vultr for this tutorial. You can sign up using this referral link: https://www.vultr.com/?ref=7370522
 
 Why do I recommend Vultr? Because they have servers in Japan with low latency and low packet loss. After registering and logging in, you need to recharge your account with at least $5. You can use PayPal to bind your domestic bank card and recharge with a minimum of $5, or you can use Alipay, which requires a minimum recharge of $10.
 

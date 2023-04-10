@@ -22,7 +22,7 @@
 
 [<img src="./images/logo_onwhite.svg" alt="alt text" title="vultr" style="zoom: 50%;" />](https://www.vultr.com/?ref=9091308-8H)
 
-Vultr推荐链接：https://www.vultr.com/?ref=9091308-8H
+Vultr推荐链接：https://www.vultr.com/?ref=7370522
 
 这里我比较推荐Vultr，为什么呢？因为他有日本服务器，延迟低，掉包也低； 注册登录后先充值5美金，用paypal绑定国内银行卡可以最低充值5美金，当然也有支付宝，支付宝要最低10美金。
 
