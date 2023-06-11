@@ -333,26 +333,6 @@ If you want to test the download and running speed of your server, you can check
 > wget -qO- bench.sh | bash
 > ```
 
-
-
-Here are some speed test results of my servers. I hope it's helpful for you to choose a server:
-
-- DigitalOcean Singapore, $5/month: 
-
-  ![](./images/do_singapore.png)
-
-- VPSServer Tokyo, $4.9/month: 
-
-  ![](./images/vpsserver_jp.png)
-
-- HostUS Hong Kong, $2.95/month: 
-
-  ![](./images/hostus_hk.png)
-
-- AWS Korea, free for one year with EC2:
-
-![](./images/aws_kr.png)
-
 ## Update on 2018/06/24
 
 If you want to customize your PAC rules, that is, if you want to visit a website that is not in the PAC directory, you can add it yourself. For example, if I want to add GitHub to the PAC custom protocol, the format is as follows:

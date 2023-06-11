@@ -377,16 +377,6 @@ Tips：如果要使用国内的服务器(例如阿里云、腾讯云之类的)�
 >wget -qO- bench.sh | bash
 >```
 
-我的一些服务器测试速度，希望对大家选择服务器时有用:
-- digitalocean新加坡 5美金一个月
-![](./images/do_singapore.png)
-- vpsserver日本东京 4.9美金一个月
-![](./images/vpsserver_jp.png)
-- hostus香港 2.95美金一个月
-![](./images/hostus_hk.png)
-- aws亚马逊韩国 免费一年EC2
-![](./images/aws_kr.png)
-
 ## 180624更新
 如果要PAC自定义规则，即譬如你要上的网站不在PAC目录里，可以自己添加
 譬如我要加github进入PAC自定义协议里
