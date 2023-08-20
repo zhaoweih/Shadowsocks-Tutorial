@@ -4,7 +4,7 @@
 
 > 🚀安装成功后如果想加速Shadowsocks的小伙伴可以看看我这篇文章[给小白的kcptun加速shadowsocks教程](./kcptun_shadowsocks_tutorial.md)(效果很明显)
 >
-> 如果过程中出现问题无法解决可以发送邮件到我邮箱zhaoweihao.dev@gmail.com  或者联系TG[@stanleyzhao996](https://t.me/stanleyzhao996)
+> 如果过程中出现问题无法解决可以发送邮件到我邮箱zhaoweihao.dev@gmail.com  或者[提issues](https://github.com/zhaoweih/Shadowsocks-Tutorial/issues)
 >
 > 如果工程师朋友们需要加速git克隆速度可以查看这篇文章[给小白的git配置shadowsocks代理加速教程](./git/git_shadowsocks_readme.md)
 
@@ -395,10 +395,10 @@ github.com/zhaoweih
 等等包含github.com的URL都会走服务器IP
 
 # 讨论
-## Telegram群
-**我创建了一个Telegram群，遇到问题的小伙伴可以一起讨论**
+## Discord
+**我创建了一个Discord讨论组，遇到问题的小伙伴可以一起讨论**
 
-[<img src="./images/Logo.png" alt="alt text" title="Telegram" />](https://t.me/+1aZY6DOOsUIxNDJl)
+[![Discord](./images/discord.svg)](https://discord.gg/wHFxCVk)
 
 # 更多
 **如果想详细了解有关shadowsocks翻墙知识的小伙伴可以查看下面文章**
