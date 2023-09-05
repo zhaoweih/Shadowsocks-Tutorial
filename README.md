@@ -1,6 +1,6 @@
 [🌏English Version](./README_en.md)
 
-[🇭🇰繁體中文](./README_zh-Hant.md)
+[🇭🇰繁體版本](./README_zh-Hant.md)
 
 **[全部文章目录](https://github.com/zhaoweih/Shadowsocks-Tutorial/wiki/%E7%9B%AE%E5%BD%95)**
 

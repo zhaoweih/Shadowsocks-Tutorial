@@ -1,4 +1,6 @@
-[中文版本](./README.md)
+[🇨🇳中文版本](./README.md)
+
+[🇭🇰繁體版本](./README_zh-Hant.md)
 
 > Note: This article was translated by ChatGPT and reviewed by myself. We apologize for any semantic inaccuracies.
 >

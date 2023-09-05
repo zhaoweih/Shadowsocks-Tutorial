@@ -1,8 +1,18 @@
 [🌏English Version](./README_en.md)
 
- [🇨🇳简体中文](./README.md)
+[🇨🇳中文版本](./README.md)
 
-> 如果過程中出現問題無法解決可以發送郵件到我郵箱 zhaoweihao.dev@gmail.com或者[提issues](https://github.com/zhaoweih/Shadowsocks-Tutorial/issues)
+>注意：本文章由ChatGPT翻譯，由我本人審核。對於任何語義不正確之處，我們深感抱歉。
+>本文已優化並調整，以適應中國網絡環境。部分內容可能對中國以外的讀者不相關。
+
+**[完整文章目錄](https://github.com/zhaoweih/Shadowsocks-Tutorial/wiki/%E7%9B%AE%E5%BD%95)**
+
+>🚀 安裝成功後，如果想要加速 Shadowsocks，您可以參考我的文章[給初學者的kcptun加速 Shadowsocks 教程](./kcptun_shadowsocks_tutorial.md) （效果非常明顯）。
+>
+> 如果在過程中遇到無法解決的問題，您可以發送郵件到我的郵箱 zhaoweihao.dev@gmail.com或者[提出問題](https://github.com/zhaoweih/Shadowsocks-Tutorial/issues)
+>
+> 如果工程師朋友們需要加速Git克隆速度，您可以查看這篇文章[給初學者的Git配置Shadowsocks 代理加速教程](./git/git_shadowsocks_readme.md)
+
 
 # 前言 
 
