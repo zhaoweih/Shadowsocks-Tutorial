@@ -239,16 +239,3 @@ IOS:
 我是一名初入社會的社畜，一個追求自由的少年，如果想要找我，可以給我發郵件📧
 
 📮我的郵箱：zhaoweihao.dev@gmail.com
-
-# 贊贊
-
-如果大家覺得這篇文章對大家有用，可以請我喝杯咖啡，同時我會將20%拿出來捐贈烏克蘭，**#StandWithUkraine🇺🇦**
-
-Stripe:
-
-https://buy.stripe.com/fZe5nDfGw8bRcfu7sw
-
-轉數快：
-
-![](./images/za.jpeg)
-
