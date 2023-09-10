@@ -25,18 +25,18 @@ Why create this library? Because there is a saying that "a programmer who cannot
 As the saying goes, "the beginning is always the hardest." It's true that buying a VPS server isn't particularly difficult, but accepting it can be a bit challenging. When I first tried to purchase a server, I was a novice who had never bought one before and had no idea where to start. But now you can rest assured that, based on my personal experience, Vultr and DigitalOcean are two service providers that allow you to deploy and destroy servers at any time, and they charge by the hour. It costs $5 per month, or roughly $0.007 per hour. Even if you create a server and its IP is blocked by the Great Firewall, you can simply delete it and it will only cost you $0.1. As a poor student, I can definitely afford this. So, what are you waiting for?
 
 ### 1. Register and Log In
-[<img src="./images/logo_onwhite.svg" alt="alt text" title="vultr" style="zoom: 50%;" />](https://www.vultr.com/?ref=9091308-8H)
+[<img src="./images/logo_onwhite.svg" alt="alt text" title="vultr" style="zoom: 50%;" />](https://www.vultr.com/?ref=7370522)
 I recommend using Vultr for this tutorial. You can sign up using this referral link: https://www.vultr.com/?ref=7370522
 
 Why do I recommend Vultr? Because they have servers in Japan with low latency and low packet loss. After registering and logging in, you need to recharge your account with at least $5. You can use PayPal to bind your domestic bank card and recharge with a minimum of $5, or you can use Alipay, which requires a minimum recharge of $10.
 
-![](./images/1.png)
+![](./images/make_a_payment.png)
 
 ### 2. Deploying the Server
 
 Step 1: On your personal page, click on "Products" and then click on the "+" button on the right side to add a server.
 
-![](./images/2.png)
+![](./images/choose_server.png)
 
 Select "Cloud Compute."
 
@@ -72,7 +72,7 @@ Step 6: Wait for the server to start up. When the Status turns green and shows "
 
 Step 7: Copy the IP address and password. They will be useful later.
 
-![](./images/8.png)
+![](./images/server_info.png)
 
 Step 8: After the server has started up, it's recommended to test if the IP address has been blocked. Open the command prompt or terminal, and type in "ping" followed by your IP address. For example, if the IP address of your server is 8.8.8.8, type in "ping 8.8.8.8". If the return message is as shown in the image below, then the IP is available. Occasionally, a "request timeout" is also acceptable, which means that some packets have been dropped. However, if "request timeout" persists, you should delete the server and deploy it again.
 

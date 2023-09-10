@@ -27,19 +27,19 @@
 
 ### 1、註冊並登錄
 
-[<img src="./images/logo_onwhite.svg" alt="alt text" title="vultr" style="zoom: 50%;" />](https://www.vultr.com/?ref=9091308-8H)
+[<img src="./images/logo_onwhite.svg" alt="alt text" title="vultr" style="zoom: 50%;" />](https://www.vultr.com/?ref=7370522)
 
 Vultr推薦連結：https://www.vultr.com/?ref=7370522
 
 這裡我比較推薦 Vultr，為什麼呢？因為他有日本伺服器，延遲低，掉包也低； 註冊登錄後先充值5美金，可以選擇信用卡，也可以選擇支付寶（Alipay）。
 
-![](./images/1.png)
+![](./images/make_a_payment.png)
 
 ### 2、部署伺服器
 
 第一步：在個人頁面點擊「Products」，然後再點右邊的➕號按鈕添加一個伺服器
 
-![](./images/2.png)
+![](./images/choose_server.png)
 
 選擇**Cloud Compute**
 
@@ -75,7 +75,7 @@ Vultr推薦連結：https://www.vultr.com/?ref=7370522
 
 第七步：複製IP地址和密碼，後面有用
 
-![](./images/8.png)
+![](./images/server_info.png)
 
 好了，到此為止最困難的事情已經過去了，後面都是一鍵式的了，喝杯茶🍵再繼續。
 

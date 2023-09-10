@@ -22,19 +22,19 @@
 
 ### 1、注册并登录
 
-[<img src="./images/logo_onwhite.svg" alt="alt text" title="vultr" style="zoom: 50%;" />](https://www.vultr.com/?ref=9091308-8H)
+[<img src="./images/logo_onwhite.svg" alt="alt text" title="vultr" style="zoom: 50%;" />](https://www.vultr.com/?ref=7370522)
 
 Vultr推荐链接：https://www.vultr.com/?ref=7370522
 
 这里我比较推荐Vultr，为什么呢？因为他有日本服务器，延迟低，掉包也低； 注册登录后先充值5美金，用paypal绑定国内银行卡可以最低充值5美金，当然也有支付宝，支付宝要最低10美金。
 
-![](./images/1.png)
+![](./images/make_a_payment.png)
 
 ### 2、部署服务器
 
 第一步：在个人页面点击Products然后再点右面的➕号按钮添加一个服务器
 
-![](./images/2.png)
+![](./images/choose_server.png)
 
 选择**Cloud Compute**
 
@@ -70,7 +70,7 @@ Vultr推荐链接：https://www.vultr.com/?ref=7370522
 
 第七步：复制IP地址和密码，后面有用
 
-![](./images/8.png)
+![](./images/server_info.png)
 
 第八步：启动完成后，当然测试一下有没有被封掉IP了，打开命令管理器或者终端，输入 ping+你的IP地址，例如我服务器IP是8.8.8.8，则ping 8.8.8.8，如果出现下图的返回信息则这个IP是可以用的，偶尔一个request timeout也是可以的，是掉包现象，如果出现一直request timeout就把这服务器删掉重新部署吧。
 
