@@ -1,11 +1,5 @@
 [🇨🇳中文版本](./README.md)
 
-[🇭🇰繁體版本](./README_zh-Hant.md)
-
-> Note: This article was translated by ChatGPT and reviewed by myself. We apologize for any semantic inaccuracies.
->
-> This article is optimized and adjusted for the Chinese network. Some parts of the content may not be relevant for readers outside of China.
-
 **[Table of Contents](https://github.com/zhaoweih/Shadowsocks-Tutorial/wiki/目录)**
 
 > 🚀If you want to speed up your Shadowsocks, you can check out my tutorial [Kcptun Acceleration Tutorial for Shadowsocks for Beginners](./kcptun_shadowsocks_tutorial.md) (it works very effectively).
@@ -179,6 +173,15 @@ You may need to wait for a while, but once the installation is complete, you wil
 I recommend taking a screenshot of this page so you don't forget the important information: your server's IP address, server port, password, and encryption method.
 
 ![](./images/libev/7.png)
+
+Finally, you need to disable the firewall on your system. Paste the following command and enter.
+
+```bash
+systemctl stop firewalld
+systemctl disable firewalld
+```
+
+## Download Client
 
 If you have followed my instructions up to this point, then you should have successfully installed the server-side of SS. However, in order to use SS, you will also need to install the client-side software on your computer or mobile device. Below are the download links for various platforms (I have personally used SS on Windows, MAC, Android, and IOS, and the steps for using it are similar for each platform.):
 

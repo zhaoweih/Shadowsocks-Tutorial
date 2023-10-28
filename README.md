@@ -1,7 +1,5 @@
 [🌏English Version](./README_en.md)
 
-[🇭🇰繁體版本](./README_zh-Hant.md)
-
 **[全部文章目录](https://github.com/zhaoweih/Shadowsocks-Tutorial/wiki/%E7%9B%AE%E5%BD%95)**
 
 > 🚀安装成功后如果想加速Shadowsocks的小伙伴可以看看我这篇文章[给小白的kcptun加速shadowsocks教程](./kcptun_shadowsocks_tutorial.md)(效果很明显)
