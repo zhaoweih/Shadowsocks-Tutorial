@@ -318,36 +318,6 @@ Finally, our task is completed here, but if you want to optimize the server conn
 >
 > After installation, the script will prompt to restart VPS, enter y and press Enter to restart.
 
-# Update
-
-## 201210 Update
-
-Tips: If you want to use domestic servers (such as Alibaba Cloud, Tencent Cloud, etc.), it is recommended to [reinstall the system with a one-click DD system](https://ssr.tools/693) to get a clean system before setting up Shadowsocks. Otherwise, you may receive a warning email.
-
-## 190518 Update
-
-[Add instructions on installing EPEL on AWS #8](https://github.com/zhaoweih/Shadowsocks-Tutorial/issues/8)
-
-## 190203 Update
-
-If you want to test the download and running speed of your server, you can check out this article: [Article](https://teddysun.com/444.html)
-
-> Just run this command:
->
-> ```bash
-> wget -qO- bench.sh | bash
-> ```
-
-## Update on 2018/06/24
-
-If you want to customize your PAC rules, that is, if you want to visit a website that is not in the PAC directory, you can add it yourself. For example, if I want to add GitHub to the PAC custom protocol, the format is as follows:
-
-```
-||github.com
-```
-
-After adding it, **remember to restart Shadowsocks to take effect**. URLs that contain github.com, such as api.github.com and github.com/zhaoweih, will use the server IP.
-
 # Q&A
 
 Here are some questions collected from emails:
@@ -358,13 +328,9 @@ You can try to install wget by referring to this article: https://www.wn789.com/
 
 **[Resolved] 2. Problem: When accessing Google Scholar, it prompts: "We are sorry, but your computer or network may be sending automated queries. To protect our users, we can't process your request right now."**
 
-Because Google has its own anti-proxy spider mechanism, many VPS IPs will be detected by Google as proxies. If you encounter this situation, you can switch to another server. If there are no other servers available, you can use the [Google Scholar Mirror](https://lai.yuweining.cn/archives/2112/).
+Because Google has its own anti-proxy spider mechanism, many VPS IPs will be detected by Google as proxies. If you encounter this situation, you can switch to another server. If there are no other servers available, you can use the **Google Scholar Mirror.**
 
-**[Resolved] 3. Install EPEL repository failed error on AWS EC2**
-
-Refer to this article: [http://blog.openpilot.cc/archives/aws-ec2%E6%8A%A5%E9%94%99install-epel-repository-failed%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/](http://blog.openpilot.cc/archives/aws-ec2报错install-epel-repository-failed的解决办法/)
-
-**[Resolved] 4. [Error] Failed to install python**
+**[Resolved] 3. [Error] Failed to install python**
 
 The problem of unable to install due to CentOS 7 being not selectable in the previous article can be resolved by trying to install on **Debian10x64** system [#27](https://github.com/zhaoweih/Shadowsocks-Tutorial/issues/27).
 

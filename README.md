@@ -334,17 +334,13 @@ status 状态
 **[已解决]2.问题:当访问Google学术时，会提示 : 
 "We are sorry, but your computer or network may be sending automated queries. To protect our users, we can't process your request right now "**  
 
-由于谷歌有自己的一套反代理爬虫的机制，所以很多 VPS 的 ip 会被谷歌检测到是代理，遇到这种情况可以用更换服务器即可，如果没有其他服务器可用，可以用[谷歌学术镜像](https://lai.yuweining.cn/archives/2112/)。
+由于谷歌有自己的一套反代理爬虫的机制，所以很多 VPS 的 ip 会被谷歌检测到是代理，遇到这种情况可以用更换服务器即可，如果没有其他服务器可用，可以用**谷歌学术镜像**。
 
-**[已解决]3.aws ec2报错Install EPEL repository failed的解决办法**  
-
-参考文章：http://blog.openpilot.cc/archives/aws-ec2%E6%8A%A5%E9%94%99install-epel-repository-failed%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/
-
-**[已解决]4.[Error] Failed to install python**  
+**[已解决]3.[Error] Failed to install python**  
 
 由于以前文章的centos7不可选导致选择centos8导致的无法安装问题可以尝试使用**Debian10x64或者CentOS7**系统安装[#27](https://github.com/zhaoweih/Shadowsocks-Tutorial/issues/27)
 
-**[已解决]5.可以ping通但是连不上**
+**[已解决]4.可以ping通但是连不上**
 
 这个情况有可能是防火墙没关闭，因为现在vultr默认会打开防火墙，所以需要关闭防火墙端口才能通
 
@@ -358,41 +354,6 @@ systemctl disable firewalld
 ![](./images/firewall_inactive.png)
 
 [在线检查端口是否开放](https://tool.chinaz.com/port)
-
-# 更新
-
-## 20230318更新
-[CentOS 7+查看防火墙状态开启或关闭防火墙命令](https://cloud.tencent.com/developer/article/1869020)
-
-## 201210更新
-Tips：如果要使用国内的服务器(例如阿里云、腾讯云之类的)最好先[一键DD系统](https://ssr.tools/693)重装成纯净版系统再搭建Shadowsocks服务，否则可能会收到警告邮件
-
-## 190518更新  
-[增加AWS安装EPEL的说明 #8](https://github.com/zhaoweih/Shadowsocks-Tutorial/issues/8)
-
-## 190203更新
-如果想要测试服务器的下载速度和运行速度，可以查看这篇文章:[文章](https://teddysun.com/444.html)
->仅需要一行命令
->```bash
->wget -qO- bench.sh | bash
->```
-
-## 180624更新
-如果要PAC自定义规则，即譬如你要上的网站不在PAC目录里，可以自己添加
-譬如我要加github进入PAC自定义协议里
-格式如下：
-
-```javascript
-||github.com
-```
-
-添加进去后,**记得重启一下Shadowsocks让它生效**
-
-api.github.com 
-
-github.com/zhaoweih
-
-等等包含github.com的URL都会走服务器IP
 
 # 讨论
 ## Discord
