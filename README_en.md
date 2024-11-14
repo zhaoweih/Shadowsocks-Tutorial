@@ -44,9 +44,9 @@ Step 2: On the page that opens, select the Frankfurt server in Germany. (Due to 
 
 ![](./images/location_select.png)
 
-Step 3: Next, pay attention to the system selection. It's recommended to choose **CentOS 7 x64**. Click on CentOS and select 7 x64 from the drop-down menu.
+Step 3: Next, pay attention to the system selection. It's recommended to choose **CentOS 9 x64**. Click on CentOS and select 9 x64 from the drop-down menu.
 
-![](./images/select_centos7.png)
+![](./images/choose_system.png)
 
 Step 4: Choose the package. Of course, you don't need a server with high configuration for SS. The lowest package that costs $5 per month is sufficient. Every time I check, the package that costs $2.5 is always sold out. If you can see it, be sure to choose it quickly. It's a rare opportunity.
 
@@ -174,7 +174,7 @@ I recommend taking a screenshot of this page so you don't forget the important i
 
 ![](./images/libev/7.png)
 
-Finally, you need to disable the firewall on your system. Paste the following command and enter.
+⚠️ Attention: You need to disable the system firewall at the end. Just paste the following command and press Enter **(this step is important; otherwise, the server connection may fail)**.
 
 ```bash
 systemctl stop firewalld

@@ -42,7 +42,7 @@ Vultr推荐链接：https://www.vultr.com/?ref=7370522
 
 ![](./images/choose_location.png)
 
-第三步：接下来要注意了，系统最好选择**CentOS 7 x64**，点击CentOS可以下拉选择7 x64
+第三步：接下来要注意了，系统最好选择**CentOS 9 x64**，点击CentOS可以下拉选择9 x64
 
 ![](./images/choose_system.png)
 
@@ -172,7 +172,7 @@ chmod +x shadowsocks-all.sh
 
 ![](./images/libev/7.png)
 
-最后需要关闭下系统的防火墙，粘贴下面的命令然后回车就行
+⚠️注意：最后需要关闭下系统的防火墙，粘贴下面的命令然后回车就行**（这一步很重要，不然会无法连接到服务器）**
 
 ```bash
 systemctl stop firewalld
