@@ -172,7 +172,7 @@ chmod +x shadowsocks-all.sh
 
 ![](./images/libev/7.png)
 
-⚠️注意：最后需要关闭下系统的防火墙，粘贴下面的命令然后回车就行**（这一步很重要，不然会无法连接到服务器）**
+⚠️注意：最后需要关闭下系统的防火墙，粘贴下面的命令然后回车就行
 
 ```bash
 systemctl stop firewalld

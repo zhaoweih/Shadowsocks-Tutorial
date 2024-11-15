@@ -174,7 +174,7 @@ I recommend taking a screenshot of this page so you don't forget the important i
 
 ![](./images/libev/7.png)
 
-⚠️ Attention: You need to disable the system firewall at the end. Just paste the following command and press Enter **(this step is important; otherwise, the server connection may fail)**.
+⚠️ Attention: You need to disable the system firewall at the end. Just paste the following command and press Enter.
 
 ```bash
 systemctl stop firewalld
