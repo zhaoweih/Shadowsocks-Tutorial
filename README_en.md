@@ -32,6 +32,9 @@ Step 1: On your personal page, click on "Products" and then click on the "+" but
 
 ![](./images/choose_server.png)
 
+In the top right corner, select **Switch back to the old experience for a limited time** to switch back to the classic view.
+![](./images/switch_back.png)
+
 Select "Cloud Compute."
 
 ![](./images/server_type_select.png)
