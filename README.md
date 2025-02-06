@@ -35,6 +35,7 @@ Vultr推荐链接：https://www.vultr.com/?ref=7370522
 ![](./images/choose_server.png)
 
 在右上角选择**Switch back to the old experience for a limited time**切换回经典视图
+
 ![](./images/switch_back.png)
 
 选择**Cloud Compute**
