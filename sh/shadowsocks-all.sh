@@ -572,7 +572,7 @@ install_dependencies(){
         echo 'export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:$PKG_CONFIG_PATH' >> ~/.bashrc
         source ~/.bashrc
         ldconfig
-        cd~
+        cd ~
         echo -e "[${green}Info${plain}] Install libev-devel manually success..."
 
         yum_depends=(
