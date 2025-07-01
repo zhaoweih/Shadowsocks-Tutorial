@@ -135,7 +135,7 @@ windows下ssh连接需要下载Xshell，百度搜一搜就能下载了，当然�
 #同时感谢[@peinuanqin-nus](https://github.com/zhaoweih/Shadowsocks-Tutorial/issues/72#issuecom#ent-3017717903) 提供的脚本修复方案
 
 ```bash
-wget --no-check-certificate -O shadowsocks-all.sh https://raw.githubusercontent.com/zhaoweih/Shadowsocks-Tutorial/master/sh/shadowsocks-all.sh
+wget --no-check-certificate -O shadowsocks-all.sh https://raw.githubusercontent.com/zhaoweih/Shadowsocks-Tutorial/main/sh/shadowsocks-all.sh
 chmod +x shadowsocks-all.sh
 ./shadowsocks-all.sh 2>&1 | tee shadowsocks-all.log
 ```
