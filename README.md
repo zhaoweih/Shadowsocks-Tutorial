@@ -346,8 +346,7 @@ status 状态
 这个情况有可能是防火墙没关闭，因为现在vultr默认会打开防火墙，所以需要关闭防火墙端口才能通
 
 ```bash
-systemctl stop firewalld
-systemctl disable firewalld
+sudo ufw disable
 ```
 
 执行后可以用`systemctl status firewalld`查看是否已经关闭，显示inactive就是关闭了防火墙
