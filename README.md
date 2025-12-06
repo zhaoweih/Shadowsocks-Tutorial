@@ -46,7 +46,7 @@ Vultr推荐链接：https://www.vultr.com/?ref=7370522
 
 ![](./images/choose_location.png)
 
-第三步：接下来要注意了，系统最好选择**CentOS 9 x64**，点击CentOS可以下拉选择9 x64
+第三步：接下来要注意了，系统最好选择**Debian 11 x64**，点击Debian可以下拉选择11 x64
 
 ![](./images/choose_system.png)
 
@@ -181,8 +181,7 @@ chmod +x shadowsocks-all.sh
 ⚠️注意：最后需要关闭下系统的防火墙，粘贴下面的命令然后回车就行
 
 ```bash
-systemctl stop firewalld
-systemctl disable firewalld
+sudo ufw disable
 ```
 
 ## 下载客户端

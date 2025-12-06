@@ -48,7 +48,7 @@ Step 2: On the page that opens, select the Frankfurt server in Germany. (Due to 
 
 ![](./images/location_select.png)
 
-Step 3: Next, pay attention to the system selection. It's recommended to choose **CentOS 9 x64**. Click on CentOS and select 9 x64 from the drop-down menu.
+Step 3: Next, pay attention to the system selection. It's recommended to choose **Debian 11 x64**. Click on Debian and select 11 x64 from the drop-down menu.
 
 ![](./images/choose_system.png)
 
@@ -181,8 +181,7 @@ I recommend taking a screenshot of this page so you don't forget the important i
 ⚠️ Attention: You need to disable the system firewall at the end. Just paste the following command and press Enter.
 
 ```bash
-systemctl stop firewalld
-systemctl disable firewalld
+sudo ufw disable
 ```
 
 ## Download Client
