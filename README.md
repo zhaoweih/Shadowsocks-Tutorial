@@ -1,4 +1,4 @@
-[🌏English Version](./README_en.md)
+[🌏English](./README_en.md)
 
 **[全部文章目录](https://github.com/zhaoweih/Shadowsocks-Tutorial/wiki/%E7%9B%AE%E5%BD%95)**
 
