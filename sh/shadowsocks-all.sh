@@ -994,6 +994,7 @@ install_shadowsocks_libev(){
     cd "${cur_dir}" || exit
     tar zxf "${shadowsocks_libev_file}".tar.gz
     cd "${shadowsocks_libev_file}" || exit
+    ./autogen.sh    # <--- ADD THIS LINE
     ./configure --disable-documentation && make && make install
     if [ $? -eq 0 ]; then
         chmod +x ${shadowsocks_libev_init}
