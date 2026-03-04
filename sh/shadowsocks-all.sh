@@ -992,18 +992,9 @@ install_shadowsocks_go(){
 
 install_shadowsocks_libev(){
     cd "${cur_dir}" || exit
-
-    # Fetch directly from Github to bypass broken release tarballs
-    rm -rf shadowsocks-libev
-    echo -e "[Info] Cloning shadowsocks-libev from Git..."
-    git clone --recursive https://github.com/shadowsocks/shadowsocks-libev.git
-
-    cd shadowsocks-libev || exit
-
-    # Generate build scripts and compile
-    ./autogen.sh
+    tar zxf "${shadowsocks_libev_file}".tar.gz
+    cd "${shadowsocks_libev_file}" || exit
     ./configure --disable-documentation && make && make install
-
     if [ $? -eq 0 ]; then
         chmod +x ${shadowsocks_libev_init}
         local service_name
@@ -1017,6 +1008,7 @@ install_shadowsocks_libev(){
     else
         echo
         echo -e "[${red}Error${plain}] ${software[3]} install failed."
+        echo 'Please visit: https://teddysun.com/486.html and contact.'
         install_cleanup
         exit 1
     fi
