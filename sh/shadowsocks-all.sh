@@ -301,9 +301,9 @@ get_ipv6(){
     [ -z "${ipv6}" ] && return 1 || return 0
 }
 
+# Modifed function: Hardcoded to version 3.3.5 instead of fetching the latest version
 get_libev_ver(){
-    libev_ver=$(wget --no-check-certificate -qO- https://api.github.com/repos/shadowsocks/shadowsocks-libev/releases/latest | grep 'tag_name' | cut -d\" -f4)
-    [ -z "${libev_ver}" ] && echo -e "[${red}Error${plain}] Get shadowsocks-libev latest version failed" && exit 1
+    libev_ver="v3.3.5"
 }
 
 get_opsy(){
@@ -710,7 +710,7 @@ install_prepare_cipher(){
         for ((i=1;i<=${#go_ciphers[@]};i++ )); do
             hint="${go_ciphers[$i-1]}"
             echo -e "${green}${i}${plain}) ${hint}"
-        done
+            done
         read -p "Which cipher you'd select(Default: ${go_ciphers[0]}):" pick
         [ -z "$pick" ] && pick=1
         expr ${pick} + 1 &>/dev/null
