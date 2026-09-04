@@ -46,7 +46,7 @@ Vultr推荐链接：https://www.vultr.com/?ref=7370522
 
 ![](./images/choose_location.png)
 
-第三步：接下来要注意了，系统最好选择**Debian 11 x64**，点击Debian可以下拉选择11 x64
+第三步：接下来要注意了，系统最好选择**Debian 12 x64**，点击Debian可以下拉选择12 x64
 
 ![](./images/choose_system.png)
 
@@ -339,7 +339,9 @@ status 状态
 
 **[已解决]3.[Error] Failed to install python**  
 
-由于以前文章的centos7不可选导致选择centos8导致的无法安装问题可以尝试使用**Debian10x64或者CentOS7**系统安装[#27](https://github.com/zhaoweih/Shadowsocks-Tutorial/issues/27)
+原因是安装脚本的依赖列表里写的是 Python 2 的包名（`python`/`python-dev`/`python-setuptools`），而这些包从 **Debian 11、Ubuntu 20.04 起就已经被移除了**，所以 apt 找不到包直接中断，即使你选的是 libev 版本也一样会卡在这里。
+
+脚本现已修复：会自动检测系统上有没有 Python 2，没有就改用 `python3` 系列的包。如果你用的是旧版脚本，重新下载一次即可。参考 [#27](https://github.com/zhaoweih/Shadowsocks-Tutorial/issues/27)
 
 **[已解决]4.可以ping通但是连不上**
 
@@ -349,7 +351,9 @@ status 状态
 sudo ufw disable
 ```
 
-执行后可以用`systemctl status firewalld`查看是否已经关闭，显示inactive就是关闭了防火墙
+执行后可以用`ufw status`查看是否已经关闭，显示inactive就是关闭了防火墙
+
+（`systemctl status firewalld`只适用于 CentOS 等使用 firewalld 的系统，Debian/Ubuntu 上会提示 `Unit firewalld.service could not be found`）
 
 ![](./images/firewall_inactive.png)
 

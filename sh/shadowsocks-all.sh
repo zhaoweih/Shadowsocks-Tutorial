@@ -585,11 +585,20 @@ install_dependencies(){
         done
     elif check_sys packageManager apt; then
         apt_depends=(
-            gettext build-essential unzip gzip python python-dev python-setuptools curl openssl libssl-dev
+            gettext build-essential unzip gzip curl openssl libssl-dev
             autoconf automake libtool gcc make perl cpio libpcre3 libpcre3-dev zlib1g-dev libev-dev libc-ares-dev git qrencode
         )
 
         apt-get -y update
+
+        # Debian 11+ and Ubuntu 20.04+ dropped the Python 2 metapackages, so
+        # asking for "python" there aborts the install before anything is built.
+        if apt-cache policy python 2>/dev/null | grep -q "Candidate: (none)"; then
+            apt_depends+=(python3 python3-dev python3-setuptools)
+        else
+            apt_depends+=(python python-dev python-setuptools)
+        fi
+
         for depend in ${apt_depends[@]}; do
             error_detect_depends "apt-get -y install ${depend}"
         done
@@ -905,7 +914,18 @@ install_shadowsocks_python(){
     fi
 
     cd ${shadowsocks_python_file} || exit
-    python setup.py install --record /usr/local/shadowsocks_python.log
+    local python_cmd
+    if command -v python >/dev/null 2>&1; then
+        python_cmd="python"
+    elif command -v python2 >/dev/null 2>&1; then
+        python_cmd="python2"
+    else
+        echo -e "[${red}Error${plain}] Shadowsocks-Python needs Python 2, which is not available on this system."
+        echo -e "[${green}Info${plain}] Please pick Shadowsocks-libev instead, or use Debian 10 / CentOS 7."
+        install_cleanup
+        exit 1
+    fi
+    ${python_cmd} setup.py install --record /usr/local/shadowsocks_python.log
 
     if [ -f /usr/bin/ssserver ] || [ -f /usr/local/bin/ssserver ]; then
         chmod +x ${shadowsocks_python_init}

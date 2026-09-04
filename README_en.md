@@ -50,7 +50,7 @@ Step 2: Select Frankfurt, Germany. Many IP addresses assigned to Japanese server
 
 ![](./images/choose_location.png)
 
-Step 3: For the operating system, select **Debian 11 x64** from the Debian drop-down menu.
+Step 3: For the operating system, select **Debian 12 x64** from the Debian drop-down menu.
 
 ![](./images/choose_system.png)
 
@@ -339,7 +339,9 @@ Google uses anti-proxy and anti-bot systems, so it may identify many VPS IP addr
 
 **[Resolved] 3. `[Error] Failed to install python`**
 
-This error can occur if you select CentOS 8 because CentOS 7 is unavailable. Try using **Debian 10 x64 or CentOS 7** instead. See [#27](https://github.com/zhaoweih/Shadowsocks-Tutorial/issues/27).
+The install script listed the Python 2 package names (`python`, `python-dev`, `python-setuptools`) as dependencies, but those packages were **removed in Debian 11 and Ubuntu 20.04**. apt cannot find them and aborts, so the install stops there even when you picked the libev version.
+
+This is now fixed: the script detects whether Python 2 exists and falls back to the `python3` packages otherwise. Re-download the script if you are running an older copy. See [#27](https://github.com/zhaoweih/Shadowsocks-Tutorial/issues/27).
 
 **[Resolved] 4. The server responds to ping, but the client cannot connect**
 
@@ -349,7 +351,9 @@ The firewall may still be enabled. Vultr enables it by default, so disable it to
 sudo ufw disable
 ```
 
-After running the command, use `systemctl status firewalld` to check the firewall status. An `inactive` status means the firewall is disabled.
+After running the command, use `ufw status` to check the firewall status. An `inactive` status means the firewall is disabled.
+
+(`systemctl status firewalld` only applies to CentOS and other firewalld-based systems; on Debian/Ubuntu it reports `Unit firewalld.service could not be found`.)
 
 ![](./images/firewall_inactive.png)
 
