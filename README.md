@@ -135,7 +135,7 @@ windows下ssh连接需要下载Xshell，百度搜一搜就能下载了，当然�
 #同时感谢[@peinuanqin-nus](https://github.com/zhaoweih/Shadowsocks-Tutorial/issues/72#issuecom#ent-3017717903) 提供的脚本修复方案
 
 ```bash
-wget --no-check-certificate -O shadowsocks-all.sh https://raw.githubusercontent.com/zhaoweih/Shadowsocks-Tutorial/main/sh/shadowsocks-all.sh
+wget -O shadowsocks-all.sh https://raw.githubusercontent.com/zhaoweih/Shadowsocks-Tutorial/main/sh/shadowsocks-all.sh
 chmod +x shadowsocks-all.sh
 ./shadowsocks-all.sh 2>&1 | tee shadowsocks-all.log
 ```
@@ -178,9 +178,11 @@ chmod +x shadowsocks-all.sh
 
 ![](./images/libev/7.png)
 
-⚠️注意：最后需要关闭下系统的防火墙，粘贴下面的命令然后回车就行
+⚠️注意：Vultr 的 Debian 默认开启了 ufw 防火墙，脚本已经会自动放行你选择的端口（安装输出里会看到 `ufw is active, port xxx (tcp/udp) has been allowed.`）。如果客户端还是连不上，可以手动放行或关闭防火墙：
 
 ```bash
+sudo ufw allow 12853   # 换成你自己的端口
+# 或者直接关闭防火墙
 sudo ufw disable
 ```
 
@@ -341,17 +343,19 @@ status 状态
 
 原因是安装脚本的依赖列表里写的是 Python 2 的包名（`python`/`python-dev`/`python-setuptools`），而这些包从 **Debian 11、Ubuntu 20.04 起就已经被移除了**，所以 apt 找不到包直接中断，即使你选的是 libev 版本也一样会卡在这里。
 
-脚本现已修复：会自动检测系统上有没有 Python 2，没有就改用 `python3` 系列的包。如果你用的是旧版脚本，重新下载一次即可。参考 [#27](https://github.com/zhaoweih/Shadowsocks-Tutorial/issues/27)
+脚本现已修复：只有选择 Shadowsocks-Python 版本时才会安装 Python 依赖，libev 版本不再需要 Python。如果你用的是旧版脚本，重新下载一次即可。参考 [#27](https://github.com/zhaoweih/Shadowsocks-Tutorial/issues/27)
 
 **[已解决]4.可以ping通但是连不上**
 
-这个情况有可能是防火墙没关闭，因为现在vultr默认会打开防火墙，所以需要关闭防火墙端口才能通
+这个情况有可能是防火墙没放行端口，因为现在vultr默认会打开防火墙。新版脚本会自动放行端口，如果是用旧版脚本装的，可以手动放行或者关闭防火墙
 
 ```bash
+sudo ufw allow 12853   # 换成你自己的端口
+# 或者直接关闭防火墙
 sudo ufw disable
 ```
 
-执行后可以用`ufw status`查看是否已经关闭，显示inactive就是关闭了防火墙
+执行后可以用`ufw status`查看，显示端口 ALLOW 或者 inactive 都可以
 
 （`systemctl status firewalld`只适用于 CentOS 等使用 firewalld 的系统，Debian/Ubuntu 上会提示 `Unit firewalld.service could not be found`）
 

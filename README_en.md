@@ -137,7 +137,7 @@ Now for the key step. Many thanks to [@teddysun](https://github.com/teddysun) fo
 Thanks also to [@peinuanqin-nus](https://github.com/zhaoweih/Shadowsocks-Tutorial/issues/72#issuecomment-3017717903) for fixing the script.
 
 ```bash
-wget --no-check-certificate -O shadowsocks-all.sh https://raw.githubusercontent.com/zhaoweih/Shadowsocks-Tutorial/main/sh/shadowsocks-all.sh
+wget -O shadowsocks-all.sh https://raw.githubusercontent.com/zhaoweih/Shadowsocks-Tutorial/main/sh/shadowsocks-all.sh
 chmod +x shadowsocks-all.sh
 ./shadowsocks-all.sh 2>&1 | tee shadowsocks-all.log
 ```
@@ -178,9 +178,11 @@ Take a screenshot so you do not lose these details: the server IP address, port,
 
 ![](./images/libev/7.png)
 
-⚠️ Finally, disable the system firewall by pasting the following command and pressing Enter:
+⚠️ Note: Vultr's Debian images ship with the ufw firewall enabled. The script now opens the port you chose automatically (you will see `ufw is active, port xxx (tcp/udp) has been allowed.` in the output). If the client still cannot connect, allow the port or disable the firewall by hand:
 
 ```bash
+sudo ufw allow 12853   # use your own port
+# or disable the firewall entirely
 sudo ufw disable
 ```
 
@@ -341,17 +343,19 @@ Google uses anti-proxy and anti-bot systems, so it may identify many VPS IP addr
 
 The install script listed the Python 2 package names (`python`, `python-dev`, `python-setuptools`) as dependencies, but those packages were **removed in Debian 11 and Ubuntu 20.04**. apt cannot find them and aborts, so the install stops there even when you picked the libev version.
 
-This is now fixed: the script detects whether Python 2 exists and falls back to the `python3` packages otherwise. Re-download the script if you are running an older copy. See [#27](https://github.com/zhaoweih/Shadowsocks-Tutorial/issues/27).
+This is now fixed: the Python packages are only installed when you pick Shadowsocks-Python; the libev build no longer needs Python at all. Re-download the script if you are running an older copy. See [#27](https://github.com/zhaoweih/Shadowsocks-Tutorial/issues/27).
 
 **[Resolved] 4. The server responds to ping, but the client cannot connect**
 
-The firewall may still be enabled. Vultr enables it by default, so disable it to allow connections to the port:
+The firewall may be blocking the port. Vultr enables ufw by default. The current script opens the port automatically; if you installed with an older copy, allow the port or disable the firewall by hand:
 
 ```bash
+sudo ufw allow 12853   # use your own port
+# or disable the firewall entirely
 sudo ufw disable
 ```
 
-After running the command, use `ufw status` to check the firewall status. An `inactive` status means the firewall is disabled.
+After running the command, use `ufw status` to check: either the port listed as ALLOW or an `inactive` status is fine.
 
 (`systemctl status firewalld` only applies to CentOS and other firewalld-based systems; on Debian/Ubuntu it reports `Unit firewalld.service could not be found`.)
 
