@@ -132,10 +132,12 @@ windows下ssh连接需要下载Xshell，百度搜一搜就能下载了，当然�
 
 下面就是精髓的部分了，感谢[@teddysun](https://github.com/teddysun)大佬制作的一键安装脚本，具体更多细节可查看博客：https://teddysun.com/486.html  (由于大佬的[退出](https://teddysun.com/548.html),所以下面的命令目前还可以使用，但是版本已经不再更新)
 
-#同时感谢[@peinuanqin-nus](https://github.com/zhaoweih/Shadowsocks-Tutorial/issues/72#issuecom#ent-3017717903) 提供的脚本修复方案
+#同时感谢[@peinuanqin-nus](https://github.com/zhaoweih/Shadowsocks-Tutorial/issues/72#issuecomment-3017717903) 提供的脚本修复方案
+
+> 脚本现在只安装 Shadowsocks-libev，用 systemd 管理服务；编译需要的源码包全部放在本仓库的 [vendor/](./vendor) 目录并做 sha256 校验，不再依赖第三方站点。如果想完全离线安装，`git clone` 整个仓库后运行 `sh/shadowsocks-all.sh` 即可。
 
 ```bash
-wget --no-check-certificate -O shadowsocks-all.sh https://raw.githubusercontent.com/zhaoweih/Shadowsocks-Tutorial/main/sh/shadowsocks-all.sh
+wget -O shadowsocks-all.sh https://raw.githubusercontent.com/zhaoweih/Shadowsocks-Tutorial/main/sh/shadowsocks-all.sh
 chmod +x shadowsocks-all.sh
 ./shadowsocks-all.sh 2>&1 | tee shadowsocks-all.log
 ```
@@ -146,11 +148,7 @@ chmod +x shadowsocks-all.sh
 
 这时候按一下**Enter回车键**它又可以继续了～
 
-接着又蹦出些东西，是让我们选择ss的服务器端，这里我选择libev版本的，输入**4**按回车
-
-![](./images/libev/1.png)
-
-如同往常，接下来是要填入ss客户端登录的密码，这里我随意填：**abc123456**
+接下来是要填入ss客户端登录的密码，这里我随意填：**abc123456**
 
 ![](./images/libev/2.png)
 
@@ -178,9 +176,11 @@ chmod +x shadowsocks-all.sh
 
 ![](./images/libev/7.png)
 
-⚠️注意：最后需要关闭下系统的防火墙，粘贴下面的命令然后回车就行
+⚠️注意：Vultr 的 Debian 默认开启了 ufw 防火墙，脚本已经会自动放行你选择的端口（安装输出里会看到 `ufw is active, port xxx (tcp/udp) has been allowed.`）。如果客户端还是连不上，可以手动放行或关闭防火墙：
 
 ```bash
+sudo ufw allow 12853   # 换成你自己的端口
+# 或者直接关闭防火墙
 sudo ufw disable
 ```
 
@@ -274,40 +274,19 @@ stop 停止
 restart 重启
 status 状态
 
-### Shadowsocks-libev 版：
 ``` bash
-/etc/init.d/shadowsocks-libev start
-/etc/init.d/shadowsocks-libev stop
-/etc/init.d/shadowsocks-libev restart
-/etc/init.d/shadowsocks-libev status
+systemctl start shadowsocks-libev
+systemctl stop shadowsocks-libev
+systemctl restart shadowsocks-libev
+systemctl status shadowsocks-libev
 ```
 
-### Shadowsocks-Python 版：
-``` bash
-/etc/init.d/shadowsocks-python start
-/etc/init.d/shadowsocks-python stop
-/etc/init.d/shadowsocks-python restart
-/etc/init.d/shadowsocks-python status
-```
+查看日志：`journalctl -u shadowsocks-libev -n 50`
 
-### ShadowsocksR 版：
-``` bash
-/etc/init.d/shadowsocks-r start
-/etc/init.d/shadowsocks-r stop
-/etc/init.d/shadowsocks-r restart
-/etc/init.d/shadowsocks-r status
-```
-
-### Shadowsocks-Go 版：
-``` bash
-/etc/init.d/shadowsocks-go start
-/etc/init.d/shadowsocks-go stop
-/etc/init.d/shadowsocks-go restart
-/etc/init.d/shadowsocks-go status
-```
+（旧版脚本安装的是 `/etc/init.d/shadowsocks-libev`，重新运行新脚本会自动迁移到 systemd）
 
 ## 如何卸载
-运行如下命令，根据提示，选择对应版本卸载
+运行如下命令，根据提示确认即可
 ``` bash
 ./shadowsocks-all.sh uninstall
 ```
@@ -341,17 +320,19 @@ status 状态
 
 原因是安装脚本的依赖列表里写的是 Python 2 的包名（`python`/`python-dev`/`python-setuptools`），而这些包从 **Debian 11、Ubuntu 20.04 起就已经被移除了**，所以 apt 找不到包直接中断，即使你选的是 libev 版本也一样会卡在这里。
 
-脚本现已修复：会自动检测系统上有没有 Python 2，没有就改用 `python3` 系列的包。如果你用的是旧版脚本，重新下载一次即可。参考 [#27](https://github.com/zhaoweih/Shadowsocks-Tutorial/issues/27)
+脚本现已修复：现在只安装 Shadowsocks-libev，整个流程不再需要 Python。如果你用的是旧版脚本，重新下载一次即可。参考 [#27](https://github.com/zhaoweih/Shadowsocks-Tutorial/issues/27)
 
 **[已解决]4.可以ping通但是连不上**
 
-这个情况有可能是防火墙没关闭，因为现在vultr默认会打开防火墙，所以需要关闭防火墙端口才能通
+这个情况有可能是防火墙没放行端口，因为现在vultr默认会打开防火墙。新版脚本会自动放行端口，如果是用旧版脚本装的，可以手动放行或者关闭防火墙
 
 ```bash
+sudo ufw allow 12853   # 换成你自己的端口
+# 或者直接关闭防火墙
 sudo ufw disable
 ```
 
-执行后可以用`ufw status`查看是否已经关闭，显示inactive就是关闭了防火墙
+执行后可以用`ufw status`查看，显示端口 ALLOW 或者 inactive 都可以
 
 （`systemctl status firewalld`只适用于 CentOS 等使用 firewalld 的系统，Debian/Ubuntu 上会提示 `Unit firewalld.service could not be found`）
 
