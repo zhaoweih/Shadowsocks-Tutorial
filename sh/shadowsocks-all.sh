@@ -209,10 +209,6 @@ check_sys(){
     fi
 }
 
-version_ge(){
-    test "$(echo "$@" | tr ' ' '\n' | sort -rV | head -n 1)" == "$1"
-}
-
 version_gt(){
     test "$(echo "$@" | tr ' ' '\n' | sort -V | head -n 1)" != "$1"
 }
@@ -268,28 +264,9 @@ centosversion(){
     fi
 }
 
-autoconf_version(){
-    if [ ! "$(command -v autoconf)" ]; then
-        echo -e "[${green}Info${plain}] Starting install package autoconf"
-        if check_sys packageManager yum; then
-            yum install -y autoconf > /dev/null 2>&1 || echo -e "[${red}Error:${plain}] Failed to install autoconf"
-        elif check_sys packageManager apt; then
-            apt-get -y update > /dev/null 2>&1
-            apt-get -y install autoconf > /dev/null 2>&1 || echo -e "[${red}Error:${plain}] Failed to install autoconf"
-        fi
-    fi
-    local autoconf_ver
-    autoconf_ver=$(autoconf --version | grep autoconf | grep -oE '[0-9.]+')
-    if version_ge "${autoconf_ver}" 2.67; then
-        return 0
-    else
-        return 1
-    fi
-}
-
 get_ip(){
     local IP
-    IP=$( ip addr | egrep -o '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | egrep -v '^192\.168|^172\.1[6-9]\.|^172\.2[0-9]\.|^172\.3[0-2]\.|^10\.|^127\.|^255\.|^0\.' | head -n 1 )
+    IP=$( ip addr | grep -Eo '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | grep -Ev '^192\.168|^172\.1[6-9]\.|^172\.2[0-9]\.|^172\.3[0-2]\.|^10\.|^127\.|^255\.|^0\.' | head -n 1 )
     [ -z "${IP}" ] && IP=$( wget -qO- -t1 -T2 ipv4.icanhazip.com )
     [ -z "${IP}" ] && IP=$( wget -qO- -t1 -T2 ipinfo.io/ip )
     echo "${IP}"
@@ -345,7 +322,7 @@ download(){
         echo "${filename} [found]"
     else
         echo "${filename} not found, download now..."
-        wget --no-check-certificate -c -t3 -T60 -O "${1}" "${2}"
+        wget -c -t3 -T60 -O "${1}" "${2}"
         if [ $? -ne 0 ]; then
             echo -e "[${red}Error${plain}] Download ${filename} failed."
             exit 1
@@ -384,7 +361,7 @@ download_files(){
     elif [ "${selected}" == '4' ]; then
         get_libev_ver
         shadowsocks_libev_file="shadowsocks-libev-$(echo "${libev_ver}" | sed -e 's/^[a-zA-Z]//g')"
-        shadowsocks_libev_url="https://github.com/shadowsocks/shadowsocks-libev/releases/download/${libev_ver}/${shadowsocks_libev_file}.tar.gz"
+        shadowsocks_libev_url="https://github.com/shadowsocks/shadowsocks-c/releases/download/${libev_ver}/${shadowsocks_libev_file}.tar.gz"
 
         download "${shadowsocks_libev_file}.tar.gz" "${shadowsocks_libev_url}"
         if check_sys packageManager yum; then
@@ -406,21 +383,31 @@ get_char(){
     stty "$SAVEDSTTY"
 }
 
+depends_log='/tmp/shadowsocks-all-depends.log'
+
 error_detect_depends(){
     local command=$1
     local depend
     depend=$(echo "${command}" | awk '{print $4}')
     echo -e "[${green}Info${plain}] Starting to install package ${depend}"
-    ${command} > /dev/null 2>&1
+    echo "### ${command}" >> "${depends_log}"
+    ${command} >> "${depends_log}" 2>&1
     if [ $? -ne 0 ]; then
         echo -e "[${red}Error${plain}] Failed to install ${red}${depend}${plain}"
-        echo 'Please visit: https://teddysun.com/486.html and contact.'
+        echo "Last lines of ${depends_log}:"
+        tail -n 20 "${depends_log}"
         exit 1
     fi
 }
 
 config_firewall(){
-    if centosversion 6; then
+    if check_sys packageManager apt; then
+        if command -v ufw > /dev/null 2>&1 && ufw status 2> /dev/null | grep -q '^Status: active'; then
+            ufw allow "${shadowsocksport}"/tcp > /dev/null 2>&1
+            ufw allow "${shadowsocksport}"/udp > /dev/null 2>&1
+            echo -e "[${green}Info${plain}] ufw is active, port ${green}${shadowsocksport}${plain} (tcp/udp) has been allowed."
+        fi
+    elif centosversion 6; then
         /etc/init.d/iptables status > /dev/null 2>&1
         if [ $? -eq 0 ]; then
             iptables -L -n | grep -i "${shadowsocksport}" > /dev/null 2>&1
@@ -435,7 +422,7 @@ config_firewall(){
         else
             echo -e "[${yellow}Warning${plain}] iptables looks like not running or not installed, please enable port ${shadowsocksport} manually if necessary."
         fi
-    elif centosversion 7; then
+    else
         systemctl status firewalld > /dev/null 2>&1
         if [ $? -eq 0 ]; then
             default_zone=$(firewall-cmd --get-default-zone)
@@ -549,6 +536,26 @@ EOF
 fi
 }
 
+# libev-devel lives in EPEL; if that still fails (see #72), build libev from source.
+install_libev_centos(){
+    if yum -y install libev-devel >> "${depends_log}" 2>&1; then
+        return 0
+    fi
+    echo -e "[${yellow}Warning${plain}] libev-devel not available from yum, building libev from source..."
+    cd "${cur_dir}" || exit
+    download 'libev-4.33.tar.gz' 'https://dist.schmorp.de/libev/Attic/libev-4.33.tar.gz'
+    tar zxf libev-4.33.tar.gz
+    cd libev-4.33 || exit
+    ./configure --prefix=/usr && make && make install
+    if [ $? -ne 0 ]; then
+        echo -e "[${red}Error${plain}] libev install failed."
+        install_cleanup
+        exit 1
+    fi
+    ldconfig
+    cd "${cur_dir}" || exit
+}
+
 install_dependencies(){
     if check_sys packageManager yum; then
         echo -e "[${green}Info${plain}] Checking the EPEL repository..."
@@ -560,44 +567,34 @@ install_dependencies(){
         [ x"$(yum-config-manager epel | grep -w enabled | awk '{print $3}')" != x'True' ] && yum-config-manager --enable epel > /dev/null 2>&1
         echo -e "[${green}Info${plain}] Checking the EPEL repository complete..."
 
-        echo -e "[${green}Info${plain}] Install libev-devel manually..."
-        cd /usr/local/src
-        curl -O https://dist.schmorp.de/libev/Attic/libev-4.33.tar.gz
-        tar zxvf libev-4.33.tar.gz
-        cd libev-4.33
-        ./configure
-        make
-        make install
-        echo 'export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH' >> ~/.bashrc
-        echo 'export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:$PKG_CONFIG_PATH' >> ~/.bashrc
-        source ~/.bashrc
-        ldconfig
-        cd ~
-        echo -e "[${green}Info${plain}] Install libev-devel manually success..."
-
         yum_depends=(
-            unzip gzip openssl openssl-devel gcc python python-devel python-setuptools pcre pcre-devel libtool libevent
+            unzip gzip openssl openssl-devel gcc pcre pcre-devel libtool libevent
             autoconf automake make curl curl-devel zlib-devel perl perl-devel cpio expat-devel gettext-devel
             c-ares-devel git qrencode
         )
+        # Only Shadowsocks-Python needs Python (2.x); the other servers do not use it at all.
+        if [ "${selected}" == '1' ]; then
+            yum_depends+=(python python-devel python-setuptools)
+        fi
         for depend in ${yum_depends[@]}; do
             error_detect_depends "yum -y install ${depend}"
         done
+        if [ "${selected}" == '4' ]; then
+            install_libev_centos
+        fi
     elif check_sys packageManager apt; then
         apt_depends=(
             gettext build-essential unzip gzip curl openssl libssl-dev
             autoconf automake libtool gcc make perl cpio libpcre3 libpcre3-dev zlib1g-dev libev-dev libc-ares-dev git qrencode
         )
 
-        apt-get -y update
-
-        # Debian 11+ and Ubuntu 20.04+ dropped the Python 2 metapackages, so
-        # asking for "python" there aborts the install before anything is built.
-        if apt-cache policy python 2>/dev/null | grep -q "Candidate: (none)"; then
-            apt_depends+=(python3 python3-dev python3-setuptools)
-        else
+        # Only Shadowsocks-Python needs Python (2.x); the other servers do not use it at all.
+        # Debian 11+ / Ubuntu 20.04+ no longer ship these packages, see install_shadowsocks_python.
+        if [ "${selected}" == '1' ]; then
             apt_depends+=(python python-dev python-setuptools)
         fi
+
+        apt-get -y update >> "${depends_log}" 2>&1
 
         for depend in ${apt_depends[@]}; do
             error_detect_depends "apt-get -y install ${depend}"
@@ -631,8 +628,8 @@ install_select(){
         hint="${software[$i-1]}"
         echo -e "${green}${i}${plain}) ${hint}"
     done
-    read -p "Please enter a number (Default ${software[0]}):" selected
-    [ -z "${selected}" ] && selected='1'
+    read -p "Please enter a number (Default ${software[3]}):" selected
+    [ -z "${selected}" ] && selected='4'
     case "${selected}" in
         1|2|3|4)
         echo
@@ -648,12 +645,21 @@ install_select(){
 }
 
 install_prepare_password(){
+    while true
+    do
     echo "Please enter password for ${software[${selected}-1]}"
-    read -p '(Default password: teddysun.com):' shadowsockspwd
+    read -r -p '(Default password: teddysun.com):' shadowsockspwd
     [ -z "${shadowsockspwd}" ] && shadowsockspwd='teddysun.com'
+    # the password is written into config.json verbatim
+    if [[ "${shadowsockspwd}" == *[\"\\]* ]]; then
+        echo -e "[${red}Error${plain}] Password must not contain double quotes or backslashes"
+        continue
+    fi
     echo
     echo "password = ${shadowsockspwd}"
     echo
+    break
+    done
 }
 
 install_prepare_port() {
@@ -796,53 +802,49 @@ install_prepare_obfs(){
 }
 
 install_prepare_libev_obfs(){
-    if autoconf_version || centosversion 6; then
+    while true
+    do
+    echo -e "Do you want install simple-obfs for ${software[${selected}-1]}? [y/n]"
+    read -p '(default: n):' libev_obfs
+    [ -z "$libev_obfs" ] && libev_obfs=n
+    case "${libev_obfs}" in
+        y|Y|n|N)
+        echo
+        echo "You choose = ${libev_obfs}"
+        echo
+        break
+        ;;
+        *)
+        echo -e "[${red}Error${plain}] Please only enter [y/n]"
+        ;;
+    esac
+    done
+
+    if [ "${libev_obfs}" == 'y' ] || [ "${libev_obfs}" == 'Y' ]; then
         while true
         do
-        echo -e "Do you want install simple-obfs for ${software[${selected}-1]}? [y/n]"
-        read -p '(default: n):' libev_obfs
-        [ -z "$libev_obfs" ] && libev_obfs=n
-        case "${libev_obfs}" in
-            y|Y|n|N)
-            echo
-            echo "You choose = ${libev_obfs}"
-            echo
-            break
-            ;;
-            *)
-            echo -e "[${red}Error${plain}] Please only enter [y/n]"
-            ;;
-        esac
+        echo -e 'Please select obfs for simple-obfs:'
+        for ((i=1;i<=${#obfs_libev[@]};i++ )); do
+            hint="${obfs_libev[$i-1]}"
+            echo -e "${green}${i}${plain}) ${hint}"
         done
-
-        if [ "${libev_obfs}" == 'y' ] || [ "${libev_obfs}" == 'Y' ]; then
-            while true
-            do
-            echo -e 'Please select obfs for simple-obfs:'
-            for ((i=1;i<=${#obfs_libev[@]};i++ )); do
-                hint="${obfs_libev[$i-1]}"
-                echo -e "${green}${i}${plain}) ${hint}"
-            done
-            read -p "Which obfs you'd select(Default: ${obfs_libev[0]}):" r_libev_obfs
-            [ -z "$r_libev_obfs" ] && r_libev_obfs=1
-            expr ${r_libev_obfs} + 1 &>/dev/null
-            if [ $? -ne 0 ]; then
-                echo -e "[${red}Error${plain}] Please enter a number"
-                continue
-            fi
-            if [[ "$r_libev_obfs" -lt 1 || "$r_libev_obfs" -gt ${#obfs_libev[@]} ]]; then
-                echo -e "[${red}Error${plain}] Please enter a number between 1 and ${#obfs_libev[@]}"
-                continue
-            fi
-            shadowsocklibev_obfs=${obfs_libev[$r_libev_obfs-1]}
-            echo
-            echo "obfs = ${shadowsocklibev_obfs}"
-            echo
-            break
-            done
+        read -p "Which obfs you'd select(Default: ${obfs_libev[0]}):" r_libev_obfs
+        [ -z "$r_libev_obfs" ] && r_libev_obfs=1
+        expr ${r_libev_obfs} + 1 &>/dev/null
+        if [ $? -ne 0 ]; then
+            echo -e "[${red}Error${plain}] Please enter a number"
+            continue
         fi
-    else
-        echo -e "[${green}Info${plain}] autoconf version is less than 2.67, simple-obfs for ${software[${selected}-1]} installation has been skipped"
+        if [[ "$r_libev_obfs" -lt 1 || "$r_libev_obfs" -gt ${#obfs_libev[@]} ]]; then
+            echo -e "[${red}Error${plain}] Please enter a number between 1 and ${#obfs_libev[@]}"
+            continue
+        fi
+        shadowsocklibev_obfs=${obfs_libev[$r_libev_obfs-1]}
+        echo
+        echo "obfs = ${shadowsocklibev_obfs}"
+        echo
+        break
+        done
     fi
 }
 
@@ -892,8 +894,7 @@ install_mbedtls(){
         download "${mbedtls_file}.tar.gz" "${mbedtls_url}"
         tar zxf "${mbedtls_file}.tar.gz"
         cd "${mbedtls_file}" || exit
-        make SHARED=1 CFLAGS=-fPIC
-        make DESTDIR=/usr install
+        make SHARED=1 CFLAGS=-fPIC && make DESTDIR=/usr install
         if [ $? -ne 0 ]; then
             echo -e "[${red}Error${plain}] ${mbedtls_file} install failed."
             install_cleanup
@@ -1038,7 +1039,12 @@ install_shadowsocks_libev_obfs(){
     if [ "${libev_obfs}" == 'y' ] || [ "${libev_obfs}" == 'Y' ]; then
         cd "${cur_dir}" || exit
         git clone https://github.com/shadowsocks/simple-obfs.git
-        [ -d simple-obfs ] && cd simple-obfs || echo -e "[${red}Error:${plain}] Failed to git clone simple-obfs."
+        if [ ! -d simple-obfs ]; then
+            echo -e "[${red}Error${plain}] Failed to git clone simple-obfs."
+            install_cleanup
+            exit 1
+        fi
+        cd simple-obfs || exit
         git submodule update --init --recursive
         if centosversion 6; then
             if [ ! "$(command -v autoconf268)" ]; then
@@ -1210,7 +1216,8 @@ install_cleanup(){
     cd "${cur_dir}" || exit
     rm -rf simple-obfs
     rm -rf ${libsodium_file} ${libsodium_file}.tar.gz
-    rm -rf "${mbedtls_file}" "${mbedtls_file}"-apache.tgz
+    rm -rf "${mbedtls_file}" "${mbedtls_file}".tar.gz
+    rm -rf libev-4.33 libev-4.33.tar.gz
     rm -rf ${shadowsocks_python_file} ${shadowsocks_python_file}.zip
     rm -rf ${shadowsocks_r_file} ${shadowsocks_r_file}.tar.gz
     rm -rf ${shadowsocks_go_file_64}.gz ${shadowsocks_go_file_32}.gz
@@ -1224,9 +1231,7 @@ install_shadowsocks(){
     install_dependencies
     download_files
     config_shadowsocks
-    if check_sys packageManager yum; then
-        config_firewall
-    fi
+    config_firewall
     install_main
     install_cleanup
 }
