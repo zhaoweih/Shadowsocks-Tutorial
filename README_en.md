@@ -136,6 +136,8 @@ Now for the key step. Many thanks to [@teddysun](https://github.com/teddysun) fo
 
 Thanks also to [@peinuanqin-nus](https://github.com/zhaoweih/Shadowsocks-Tutorial/issues/72#issuecomment-3017717903) for fixing the script.
 
+> The script now installs Shadowsocks-libev only and manages it with systemd. Every source tarball it compiles is kept in this repository under [vendor/](./vendor) and verified with sha256, so it no longer depends on third-party sites. For a fully offline install, `git clone` the repository and run `sh/shadowsocks-all.sh`.
+
 ```bash
 wget -O shadowsocks-all.sh https://raw.githubusercontent.com/zhaoweih/Shadowsocks-Tutorial/main/sh/shadowsocks-all.sh
 chmod +x shadowsocks-all.sh
@@ -147,10 +149,6 @@ Copy and paste the commands above into Xshell. In Xshell, right-click to paste. 
 ![](./images/w-6.png)
 
 Press **Enter** to continue.
-
-The script will ask which SS server implementation to install. This guide uses the libev version: enter **4** and press Enter.
-
-![](./images/libev/1.png)
 
 Next, enter the password that SS clients will use. This example uses **abc123456**.
 
@@ -269,45 +267,20 @@ Now for the moment of truth: enter `google.com` in your browser and press Enter.
 
 `start` starts the service, `stop` stops it, `restart` restarts it, and `status` shows its current status.
 
-### Shadowsocks-libev
-
 ```bash
-/etc/init.d/shadowsocks-libev start
-/etc/init.d/shadowsocks-libev stop
-/etc/init.d/shadowsocks-libev restart
-/etc/init.d/shadowsocks-libev status
+systemctl start shadowsocks-libev
+systemctl stop shadowsocks-libev
+systemctl restart shadowsocks-libev
+systemctl status shadowsocks-libev
 ```
 
-### Shadowsocks-Python
+Logs: `journalctl -u shadowsocks-libev -n 50`
 
-```bash
-/etc/init.d/shadowsocks-python start
-/etc/init.d/shadowsocks-python stop
-/etc/init.d/shadowsocks-python restart
-/etc/init.d/shadowsocks-python status
-```
-
-### ShadowsocksR
-
-```bash
-/etc/init.d/shadowsocks-r start
-/etc/init.d/shadowsocks-r stop
-/etc/init.d/shadowsocks-r restart
-/etc/init.d/shadowsocks-r status
-```
-
-### Shadowsocks-Go
-
-```bash
-/etc/init.d/shadowsocks-go start
-/etc/init.d/shadowsocks-go stop
-/etc/init.d/shadowsocks-go restart
-/etc/init.d/shadowsocks-go status
-```
+(Older versions of the script installed `/etc/init.d/shadowsocks-libev`; running the new script migrates the installation to systemd automatically.)
 
 ## How to Uninstall
 
-Run the following command, then select the version you want to uninstall when prompted:
+Run the following command and confirm when prompted:
 
 ```bash
 ./shadowsocks-all.sh uninstall
@@ -343,7 +316,7 @@ Google uses anti-proxy and anti-bot systems, so it may identify many VPS IP addr
 
 The install script listed the Python 2 package names (`python`, `python-dev`, `python-setuptools`) as dependencies, but those packages were **removed in Debian 11 and Ubuntu 20.04**. apt cannot find them and aborts, so the install stops there even when you picked the libev version.
 
-This is now fixed: the Python packages are only installed when you pick Shadowsocks-Python; the libev build no longer needs Python at all. Re-download the script if you are running an older copy. See [#27](https://github.com/zhaoweih/Shadowsocks-Tutorial/issues/27).
+This is now fixed: the script only installs Shadowsocks-libev and no longer needs Python at all. Re-download the script if you are running an older copy. See [#27](https://github.com/zhaoweih/Shadowsocks-Tutorial/issues/27).
 
 **[Resolved] 4. The server responds to ping, but the client cannot connect**
 
