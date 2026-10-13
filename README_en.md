@@ -34,11 +34,11 @@ I recommend Vultr because it offers servers in Japan with low latency and low pa
 
 ### 2. Deploying the Server
 
-Step 1: On your account page, click **Products**, then click the **+** button on the right to add a server.
+Step 1: In the left sidebar, click **Compute** → **Instances**, then click the **Deploy Server** button to add a server.
 
 ![](./images/choose_server.png)
 
-In the upper-right corner, select **Switch back to the old experience for a limited time** to return to the classic interface.
+In the upper-right corner, click **Switch to old version** to return to the classic interface.
 
 ![](./images/switch_back.png)
 
