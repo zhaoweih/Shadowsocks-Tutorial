@@ -30,11 +30,11 @@ Vultr推荐链接：https://www.vultr.com/?ref=7370522
 
 ### 2、部署服务器
 
-第一步：在个人页面点击Products然后再点右面的➕号按钮添加一个服务器
+第一步：在左侧菜单点击**Compute**→**Instances**，然后点击**Deploy Server**按钮添加一个服务器
 
 ![](./images/choose_server.png)
 
-在右上角选择**Switch back to the old experience for a limited time**切换回经典视图
+在右上角点击**Switch to old version**切换回经典视图
 
 ![](./images/switch_back.png)
 
