@@ -132,9 +132,9 @@ After you sign in successfully, the screen should look like this:
 
 ![](./images/w-5.png)
 
-Now for the key step. Many thanks to [@teddysun](https://github.com/teddysun) for creating the one-click installation script. For more details, see https://teddysun.com/486.html. The commands below still work, but the original script is no longer maintained because [the author has retired](https://teddysun.com/548.html).
+Now for the key step. Many thanks to [@teddysun](https://github.com/teddysun) for creating the one-click installation script. For more details, see https://teddysun.com/486.html. The commands below still work, but the original script is no longer maintained because [the author stepped away from the project](https://teddysun.com/548.html).
 
-Thanks also to [@peinuanqin-nus](https://github.com/zhaoweih/Shadowsocks-Tutorial/issues/72#issuecomment-3017717903) for fixing the script.
+Thanks also to [@peinuanqin-nus](https://github.com/zhaoweih/Shadowsocks-Tutorial/issues/72#issuecomment-3017717903) for providing a fix for the script.
 
 ```bash
 wget --no-check-certificate -O shadowsocks-all.sh https://raw.githubusercontent.com/zhaoweih/Shadowsocks-Tutorial/main/sh/shadowsocks-all.sh
@@ -164,7 +164,7 @@ Choose an encryption method. I recommend **xchacha20-ietf-poly1305**, so enter *
 
 ![](./images/libev/4.png)
 
-When asked whether to enable the simply-obfs plugin, accept the default by pressing Enter.
+When asked whether to install the simple-obfs plugin, accept the default (no) by pressing Enter.
 
 ![](./images/libev/5.png)
 
@@ -245,7 +245,7 @@ Here is a quick explanation of PAC and global modes:
 
 In PAC mode, connections to Chinese websites go directly through your local network, while connections to blocked websites go through your server.
 
-In global mode, all traffic goes through your server.
+In global mode, all requests sent to the local proxy go through your server.
 
 I recommend PAC mode. Its routing rules are maintained in [gfwlist](https://github.com/gfwlist/gfwlist).
 
@@ -341,7 +341,7 @@ Google uses anti-proxy and anti-bot systems, so it may identify many VPS IP addr
 
 The install script listed the Python 2 package names (`python`, `python-dev`, `python-setuptools`) as dependencies, but those packages were **removed in Debian 11 and Ubuntu 20.04**. apt cannot find them and aborts, so the install stops there even when you picked the libev version.
 
-This is now fixed: the script detects whether Python 2 exists and falls back to the `python3` packages otherwise. Re-download the script if you are running an older copy. See [#27](https://github.com/zhaoweih/Shadowsocks-Tutorial/issues/27).
+This is now fixed: the script checks whether the package manager offers the `python` package and falls back to the `python3` packages when it is unavailable. Re-download the script if you are running an older copy. See [#27](https://github.com/zhaoweih/Shadowsocks-Tutorial/issues/27).
 
 **[Resolved] 4. The server responds to ping, but the client cannot connect**
 
